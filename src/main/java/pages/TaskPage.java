@@ -1,10 +1,10 @@
 package pages;
 import org.openqa.selenium.WebDriver;
 
-public class ClientPage {
+public class TaskPage {
     private WebDriver driver;
 
-    public ClientPage(WebDriver driver) {
+    public TaskPage(WebDriver driver) {
         this.driver = driver;
     }
 
