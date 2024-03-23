@@ -21,7 +21,7 @@ public class TaskPage {
 
 
     // auth = chau
-    public void addClient(){
+    public void addTask(){
 
     }
 }
