@@ -72,9 +72,17 @@ public class CommonBase {
 	
 	public boolean isElementPresent(By locator)
 	{
+		try {
 		WebDriverWait wait = new WebDriverWait(driver, initWaitTime);
 		wait.until(ExpectedConditions.visibilityOf(getElementPresentDOM(locator)));
 		return getElementPresentDOM(locator).isDisplayed();
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			System.out.println("can not find element");
+			return false;
+		} catch (org.openqa.selenium.TimeoutException e2) {
+			System.out.println("can not find element");
+			return false;
+		}
 	}
 	public void click(By locator)
 	{
