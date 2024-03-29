@@ -245,4 +245,76 @@ public class FilterTaskTest extends CommonBase {
         scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByTeamMember(name));
     }
+
+    private boolean checkListTaskFilterByPriority(String text){
+        List<WebElement> elements = getElements(CT_Common.PRIORITY_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+                if(!element.getAttribute("title").trim().contains(text)){
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+
+    @Test
+    public void filterByPriority_Minor() throws InterruptedException {
+        String priority = "Minor";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByPriority(priority);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByPriority(priority));
+    }
+
+    @Test
+    public void filterByPriority_Major() throws InterruptedException {
+        String priority = "Major";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByPriority(priority);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByPriority(priority));
+    }
+
+    @Test
+    public void filterByPriority_Critical() throws InterruptedException {
+        String priority = "Critical";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByPriority(priority);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByPriority(priority));
+    }
+
+    @Test
+    public void filterByPriority_Blocker() throws InterruptedException {
+        String priority = "Blocker";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByPriority(priority);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByPriority(priority));
+    }
+
+    private boolean checkListTaskFilterByLabel(String text){
+        List<WebElement> elements = getElements(CT_Common.LABEL_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+                if(!element.getText().trim().equals(text)){
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+
+    @Test
+    public void filterByLabel() throws InterruptedException {
+        String label = "Bug";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByLabel(label);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByLabel(label));
+    }
+
 }

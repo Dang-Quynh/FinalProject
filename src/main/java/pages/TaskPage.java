@@ -40,14 +40,22 @@ public class TaskPage {
     WebElement dropdownTeamMemberFilter;
     @FindBy(id = "s2id_autogen12_search")
     WebElement inputSearchTeamMemberFilter;
-    @FindBy(id = "")
+    @FindBy(id = "s2id_autogen13")
     WebElement dropdownPriorityFilter;
-    @FindBy(id = "")
+    @FindBy(id = "s2id_autogen14_search")
+    WebElement inputSearchPriorityFilter;
+    @FindBy(id = "s2id_autogen15")
     WebElement dropdownLabelFilter;
-    @FindBy(id = "")
+    @FindBy(id = "s2id_autogen16_search")
+    WebElement inputSearchLabelFilter;
+    @FindBy(id = "s2id_autogen17")
     WebElement dropdownDeadlineFilter;
-    @FindBy(id = "")
+    @FindBy(id = "s2id_autogen18_search")
+    WebElement inputSearchDeadlineFilter;
+    @FindBy(id = "s2id_autogen19")
     WebElement dropdownStatusFilter;
+    @FindBy(id = "s2id_autogen20_search")
+    WebElement inputSearchStatusFilter;
 
     @FindBy(xpath = "//a[text()=' Add task']")
     WebElement addTaskBtn;
@@ -227,12 +235,38 @@ public class TaskPage {
         waitTableLoadData();
     }
 
-    public void filterByPriority(){
+    public void filterByPriority(String priority) throws InterruptedException {
+        // show filter list
+        showFilterButton.click();
 
+        // senKey Related to
+        dropdownPriorityFilter.click();
+        inputSearchPriorityFilter.sendKeys(priority);
+        inputSearchPriorityFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
+
+        // set default value for TeamMember filter
+        dropdownTeamMemberFilter.click();
+        inputSearchTeamMemberFilter.sendKeys("Team member");
+        inputSearchTeamMemberFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
     }
 
-    public void filterByLabel(){
+    public void filterByLabel(String label) throws InterruptedException {
+        // show filter list
+        showFilterButton.click();
 
+        // senKey Related to
+        dropdownLabelFilter.click();
+        inputSearchLabelFilter.sendKeys(label);
+        inputSearchLabelFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
+
+        // set default value for TeamMember filter
+        dropdownTeamMemberFilter.click();
+        inputSearchTeamMemberFilter.sendKeys("Team member");
+        inputSearchTeamMemberFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
     }
 
     public void filterByDeadline(){
