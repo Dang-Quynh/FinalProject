@@ -7,14 +7,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Optional;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.TaskPage;
 
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -317,4 +315,112 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByLabel(label));
     }
 
+    private Date transformDeadlineValue(String value){
+        String times[] =  value.split("-");
+        if(times.length > 2){
+            int year = Integer.valueOf(times[2]);
+            int month = Integer.valueOf(times[1]) - 1;
+            int day = Integer.valueOf(times[0]);
+            return new Date(year, month, day);
+        }
+        else {
+            return new Date();
+        }
+    }
+
+    private boolean checkListTaskFilterByDeadline(String text, String deadlineValue){
+        System.out.println();
+        List<WebElement> elements = getElements(CT_Common.DEADLINE_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+
+                long elementDeadlineTime = transformDeadlineValue(element.getText()).getTime();
+                long deadlineTime = transformDeadlineValue(deadlineValue).getTime();
+                long currentTime = new Date().getTime();
+
+                if(text == "Custom"){
+                    if(!element.getText().trim().equals(text)){
+                        return false;
+                    }
+                }
+                else if(text == "Today"){
+                    if(elementDeadlineTime == deadlineTime){
+                        return false;
+                    }
+                }
+                else if(text == "Expired"){
+                    if(elementDeadlineTime >= currentTime){
+                        return false;
+                    }
+                }
+                else {
+                    if( elementDeadlineTime > deadlineTime || elementDeadlineTime < deadlineTime){
+                        return false;
+                    }
+                }
+            }
+
+        }
+        return true;
+    }
+
+    @Test
+    public void filterByDeadline_Expired() throws InterruptedException {
+        String deadline = "Expired";
+        TaskPage taskPage = new TaskPage(driver);
+        String expiredDate = "";
+        taskPage.filterByDeadline(deadline);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByDeadline(deadline, expiredDate));
+    }
+
+    @Test
+    public void filterByDeadline_Today() throws InterruptedException {
+        String deadline = "Today";
+        TaskPage taskPage = new TaskPage(driver);
+        String deadlineData = taskPage.filterByDeadline(deadline);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
+    }
+
+    @Test
+    public void filterByDeadline_Tomorrow() throws InterruptedException {
+        String deadline = "Tomorrow";
+        TaskPage taskPage = new TaskPage(driver);
+        String deadlineData = taskPage.filterByDeadline(deadline);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
+    }
+
+    @Test
+    public void filterByDeadline_In7Days() throws InterruptedException {
+        String deadline = "In 7 days";
+        TaskPage taskPage = new TaskPage(driver);
+        String deadlineData = taskPage.filterByDeadline(deadline);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
+    }
+
+    @Test
+    public void filterByDeadline_In15Days() throws InterruptedException {
+        String deadline = "In 15 days";
+        TaskPage taskPage = new TaskPage(driver);
+        String deadlineData = taskPage.filterByDeadline(deadline);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
+    }
+
+    @Test
+    public void filterByDeadline_Custom() throws InterruptedException {
+        String deadline = "Custom";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByDeadline(deadline);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByLabel(deadline));
+    }
+
+    @AfterMethod
+    private void closeDriver(){
+        quitDriver(driver);
+    }
 }
