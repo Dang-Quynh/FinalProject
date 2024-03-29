@@ -8,7 +8,9 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public class TaskPage {
     private WebDriver driver;
@@ -83,6 +85,8 @@ public class TaskPage {
     WebElement addTask_SubscriptionDropdown;
     @FindBy(id = "s2id_ticket_id")
     WebElement addTask_TicketDropdown;
+    @FindBy(id = "deadline")
+    WebElement addTask_DeadlineInput;
     @FindBy(xpath = "//button[@type='submit' and text()=' Save']")
     WebElement addTask_SaveBtn;
 
@@ -262,6 +266,24 @@ public class TaskPage {
         dropdownTeamMemberFilter.click();
         inputSearchTeamMemberFilter.sendKeys("Team member");
         inputSearchTeamMemberFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
+    }
+
+    public void addTaskDataForDeadlineFilter_Today() throws InterruptedException {
+        addTaskBtn.click();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Title']")));
+        addTask_titleInput.sendKeys("addRelateToData");
+        addTask_RelateToDropdown.click();
+        addTask_SelectSearchInput.sendKeys("Client");
+        addTask_SelectSearchInput.sendKeys(Keys.TAB);
+        Thread.sleep(1000);
+        addTask_ClientDropdown.click();
+        addTask_SelectSearchInput.sendKeys("a");
+        addTask_SelectSearchInput.sendKeys(Keys.TAB);
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        addTask_DeadlineInput.sendKeys(formatter.format(new Date()));
+        addTask_SaveBtn.click();
         waitTableLoadData();
     }
 

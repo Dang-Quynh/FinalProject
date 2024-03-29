@@ -52,7 +52,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Project() throws InterruptedException {
         String relatedTo = "Project";
         TaskPage taskPage = new TaskPage(driver);
@@ -61,7 +61,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Client() throws InterruptedException {
         String relatedTo = "Client";
         TaskPage taskPage = new TaskPage(driver);
@@ -72,7 +72,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Contract() throws InterruptedException {
         String relatedTo = "Contract";
         TaskPage taskPage = new TaskPage(driver);
@@ -83,7 +83,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Estimate() throws InterruptedException {
         String relatedTo = "Estimate";
         TaskPage taskPage = new TaskPage(driver);
@@ -94,7 +94,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Expense() throws InterruptedException {
         String relatedTo = "Expense";
         TaskPage taskPage = new TaskPage(driver);
@@ -105,7 +105,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Invoice() throws InterruptedException {
         String relatedTo = "Invoice";
         TaskPage taskPage = new TaskPage(driver);
@@ -116,7 +116,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Lead() throws InterruptedException {
         String relatedTo = "Lead";
         TaskPage taskPage = new TaskPage(driver);
@@ -127,7 +127,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Order() throws InterruptedException {
         String relatedTo = "Order";
         TaskPage taskPage = new TaskPage(driver);
@@ -138,7 +138,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Proposal() throws InterruptedException {
         String relatedTo = "Proposal";
         TaskPage taskPage = new TaskPage(driver);
@@ -149,7 +149,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Subscription() throws InterruptedException {
         String relatedTo = "Subscription";
         TaskPage taskPage = new TaskPage(driver);
@@ -160,7 +160,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByRelatedTo_Ticket() throws InterruptedException {
         String relatedTo = "Ticket";
         TaskPage taskPage = new TaskPage(driver);
@@ -183,7 +183,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByProject() throws InterruptedException {
         String projectName = "Mobile App Development";
         TaskPage taskPage = new TaskPage(driver);
@@ -205,7 +205,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByMilestone_Release() throws InterruptedException {
         String milestone = "Release";
         String projectName = "Mobile App Development";
@@ -215,7 +215,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByMilestone(milestone));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByMilestone_BetaRelease() throws InterruptedException {
         String milestone = "Beta Release";
         String projectName = "Mobile App Development";
@@ -238,7 +238,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByTeamMember() throws InterruptedException {
         String name = "Sara Ann";
         TaskPage taskPage = new TaskPage(driver);
@@ -260,7 +260,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByPriority_Minor() throws InterruptedException {
         String priority = "Minor";
         TaskPage taskPage = new TaskPage(driver);
@@ -269,7 +269,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByPriority(priority));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByPriority_Major() throws InterruptedException {
         String priority = "Major";
         TaskPage taskPage = new TaskPage(driver);
@@ -278,7 +278,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByPriority(priority));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByPriority_Critical() throws InterruptedException {
         String priority = "Critical";
         TaskPage taskPage = new TaskPage(driver);
@@ -287,7 +287,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByPriority(priority));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByPriority_Blocker() throws InterruptedException {
         String priority = "Blocker";
         TaskPage taskPage = new TaskPage(driver);
@@ -309,7 +309,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByLabel() throws InterruptedException {
         String label = "Bug";
         TaskPage taskPage = new TaskPage(driver);
@@ -318,33 +318,24 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByLabel(label));
     }
 
-    private Date transformDeadlineValue(String value) throws ParseException {
-        if(value != ""){
-            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
-            Date date = formatter.parse(value);
-            return date;
-        }
-        else {
-            return new Date();
-        }
-    }
-
     private boolean checkListTaskFilterByDeadline(String text, String deadlineValue) throws ParseException {
         List<WebElement> elements = getElements(CT_Common.DEADLINE_VALUE_COLUMNS);
         if(elements.size() > 0){
-            for(WebElement element:elements){
+            SimpleDateFormat formatter1 = new SimpleDateFormat("dd-MM-yyyy");
+            SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
 
-                long elementDeadlineTime = transformDeadlineValue(element.getText()).getTime();
-                long deadlineTime = transformDeadlineValue(deadlineValue).getTime();
-                long currentTime = new Date().getTime();
+            for(WebElement element:elements){
+                long elementDeadlineTime = formatter1.parse(element.getText()).getTime();
+                long currentTime = formatter2.parse(formatter2.format(new Date())).getTime();
 
                 if(text == "Custom"){
                     if(!element.getText().trim().equals(text)){
                         return false;
                     }
                 }
-                else if(text == "Today"){
-                    if(elementDeadlineTime == deadlineTime){
+                else if(text == "Today" || text == "Tomorrow"){
+                    long deadlineTime = formatter2.parse(deadlineValue).getTime();
+                    if(elementDeadlineTime != deadlineTime){
                         return false;
                     }
                 }
@@ -354,7 +345,8 @@ public class FilterTaskTest extends CommonBase {
                     }
                 }
                 else {
-                    if( elementDeadlineTime > deadlineTime || elementDeadlineTime < deadlineTime){
+                    long deadlineTime = formatter2.parse(deadlineValue).getTime();
+                    if( elementDeadlineTime > deadlineTime || elementDeadlineTime <= currentTime){
                         return false;
                     }
                 }
@@ -363,7 +355,7 @@ public class FilterTaskTest extends CommonBase {
         return true;
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByDeadline_Expired() throws InterruptedException, ParseException {
         String deadline = "Expired";
         TaskPage taskPage = new TaskPage(driver);
@@ -373,25 +365,28 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, expiredDate));
     }
 
-    @Test
+    @Test(priority = 1)
     public void filterByDeadline_Today() throws InterruptedException, ParseException {
         String deadline = "Today";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForDeadlineFilter_Today();
+        Thread.sleep(1000);
         String deadlineData = taskPage.filterByDeadline(deadline);
         scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
     }
 
-    @Test
+    @Test(priority = 2)
     public void filterByDeadline_Tomorrow() throws InterruptedException, ParseException {
         String deadline = "Tomorrow";
         TaskPage taskPage = new TaskPage(driver);
         String deadlineData = taskPage.filterByDeadline(deadline);
+        Thread.sleep(1000);
         scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
     }
 
-    @Test
+    @Test(priority = 2)
     public void filterByDeadline_In7Days() throws InterruptedException, ParseException {
         String deadline = "In 7 days";
         TaskPage taskPage = new TaskPage(driver);
@@ -400,7 +395,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
     }
 
-    @Test
+    @Test(priority = 2)
     public void filterByDeadline_In15Days() throws InterruptedException, ParseException {
         String deadline = "In 15 days";
         TaskPage taskPage = new TaskPage(driver);
@@ -409,7 +404,7 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
     }
 
-    @Test
+    @Test(priority = 2)
     public void filterByDeadline_Custom() throws InterruptedException {
         String deadline = "Custom";
         TaskPage taskPage = new TaskPage(driver);
@@ -420,6 +415,6 @@ public class FilterTaskTest extends CommonBase {
 
     @AfterMethod
     private void closeDriver(){
-        quitDriver(driver);
+//        quitDriver(driver);
     }
 }

@@ -13,7 +13,7 @@ public class CT_Common {
     public static By ASSIGNED_TO_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[7]");
     public static By PRIORITY_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[2]//span[contains(@class,'priority-badge')]/..");
     public static By LABEL_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[2]//span[@title='Label']");
-    public static By DEADLINE_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[4]//span");
+    public static By DEADLINE_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[4]");
 
 
 }
