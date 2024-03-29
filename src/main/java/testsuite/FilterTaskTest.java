@@ -11,9 +11,12 @@ import org.testng.annotations.*;
 import pages.LoginPage;
 import pages.TaskPage;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class FilterTaskTest extends CommonBase {
@@ -315,21 +318,18 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByLabel(label));
     }
 
-    private Date transformDeadlineValue(String value){
-        String times[] =  value.split("-");
-        if(times.length > 2){
-            int year = Integer.valueOf(times[2]);
-            int month = Integer.valueOf(times[1]) - 1;
-            int day = Integer.valueOf(times[0]);
-            return new Date(year, month, day);
+    private Date transformDeadlineValue(String value) throws ParseException {
+        if(value != ""){
+            SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+            Date date = formatter.parse(value);
+            return date;
         }
         else {
             return new Date();
         }
     }
 
-    private boolean checkListTaskFilterByDeadline(String text, String deadlineValue){
-        System.out.println();
+    private boolean checkListTaskFilterByDeadline(String text, String deadlineValue) throws ParseException {
         List<WebElement> elements = getElements(CT_Common.DEADLINE_VALUE_COLUMNS);
         if(elements.size() > 0){
             for(WebElement element:elements){
@@ -359,13 +359,12 @@ public class FilterTaskTest extends CommonBase {
                     }
                 }
             }
-
         }
         return true;
     }
 
     @Test
-    public void filterByDeadline_Expired() throws InterruptedException {
+    public void filterByDeadline_Expired() throws InterruptedException, ParseException {
         String deadline = "Expired";
         TaskPage taskPage = new TaskPage(driver);
         String expiredDate = "";
@@ -375,7 +374,7 @@ public class FilterTaskTest extends CommonBase {
     }
 
     @Test
-    public void filterByDeadline_Today() throws InterruptedException {
+    public void filterByDeadline_Today() throws InterruptedException, ParseException {
         String deadline = "Today";
         TaskPage taskPage = new TaskPage(driver);
         String deadlineData = taskPage.filterByDeadline(deadline);
@@ -384,7 +383,7 @@ public class FilterTaskTest extends CommonBase {
     }
 
     @Test
-    public void filterByDeadline_Tomorrow() throws InterruptedException {
+    public void filterByDeadline_Tomorrow() throws InterruptedException, ParseException {
         String deadline = "Tomorrow";
         TaskPage taskPage = new TaskPage(driver);
         String deadlineData = taskPage.filterByDeadline(deadline);
@@ -393,7 +392,7 @@ public class FilterTaskTest extends CommonBase {
     }
 
     @Test
-    public void filterByDeadline_In7Days() throws InterruptedException {
+    public void filterByDeadline_In7Days() throws InterruptedException, ParseException {
         String deadline = "In 7 days";
         TaskPage taskPage = new TaskPage(driver);
         String deadlineData = taskPage.filterByDeadline(deadline);
@@ -402,7 +401,7 @@ public class FilterTaskTest extends CommonBase {
     }
 
     @Test
-    public void filterByDeadline_In15Days() throws InterruptedException {
+    public void filterByDeadline_In15Days() throws InterruptedException, ParseException {
         String deadline = "In 15 days";
         TaskPage taskPage = new TaskPage(driver);
         String deadlineData = taskPage.filterByDeadline(deadline);
