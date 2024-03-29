@@ -329,7 +329,8 @@ public class FilterTaskTest extends CommonBase {
                 long currentTime = formatter2.parse(formatter2.format(new Date())).getTime();
 
                 if(text == "Custom"){
-                    if(!element.getText().trim().equals(text)){
+                    long deadlineTime = formatter2.parse(deadlineValue).getTime();
+                    if(!((deadlineTime == currentTime && elementDeadlineTime == deadlineTime) || (elementDeadlineTime <= deadlineTime && elementDeadlineTime > currentTime))){
                         return false;
                     }
                 }
@@ -346,7 +347,7 @@ public class FilterTaskTest extends CommonBase {
                 }
                 else {
                     long deadlineTime = formatter2.parse(deadlineValue).getTime();
-                    if( elementDeadlineTime > deadlineTime || elementDeadlineTime <= currentTime){
+                    if( !(elementDeadlineTime <= deadlineTime && elementDeadlineTime > currentTime)){
                         return false;
                     }
                 }
@@ -404,13 +405,65 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
     }
 
+    //todo
     @Test(priority = 2)
-    public void filterByDeadline_Custom() throws InterruptedException {
-        String deadline = "Custom";
+    public void filterByDeadline_Custom() throws InterruptedException, ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        String deadline = "2024-04-02";
+        Date date = formatter.parse(deadline);
         TaskPage taskPage = new TaskPage(driver);
-        taskPage.filterByDeadline(deadline);
+        taskPage.filterByDeadline("Custom", date);
         scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByLabel(deadline));
+    }
+
+
+    private boolean checkListTaskFilterByStatus(String text){
+        List<WebElement> elements = getElements(CT_Common.STATUS_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+                if(!element.getText().trim().equals(text)){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    @Test(priority = 1)
+    public void filterByStatus_Todo() throws InterruptedException {
+        String status = "To do";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByStatus(status);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByStatus(status));
+    }
+
+    @Test(priority = 1)
+    public void filterByStatus_InProgress() throws InterruptedException {
+        String status = "In progress";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByStatus(status);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByStatus(status));
+    }
+
+    @Test(priority = 1)
+    public void filterByStatus_Review() throws InterruptedException {
+        String status = "Review";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByStatus(status);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByStatus(status));
+    }
+
+    @Test(priority = 1)
+    public void filterByStatus_Done() throws InterruptedException {
+        String status = "Done";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByStatus(status);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByStatus(status));
     }
 
     @AfterMethod

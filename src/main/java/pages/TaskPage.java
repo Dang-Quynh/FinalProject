@@ -1,8 +1,6 @@
 package pages;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,6 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
 public class TaskPage {
     private WebDriver driver;
@@ -52,7 +52,7 @@ public class TaskPage {
     WebElement inputSearchLabelFilter;
     @FindBy(xpath = "//button[@name='deadline']")
     WebElement dropdownDeadlineFilter;
-    @FindBy(xpath = "//button[@name='deadline']")
+    @FindBy(xpath = "//span[contains(@class,'filter-multi-select')]//button")
     WebElement dropdownStatusFilter;
 
     @FindBy(xpath = "//a[text()=' Add task']")
@@ -106,7 +106,7 @@ public class TaskPage {
         addTask_SelectSearchInput.sendKeys(Keys.TAB);
         Thread.sleep(1000);
 
-        switch (RelatedTo){
+        switch (RelatedTo) {
             case "Client":
                 addTask_ClientDropdown.click();
                 addTask_SelectSearchInput.sendKeys("a");
@@ -209,10 +209,9 @@ public class TaskPage {
         Thread.sleep(1000);
         // senKey Milestone
         dropdownMilestoneFilter.click();
-        if(milestone == "Release"){
+        if (milestone == "Release") {
             valueMilestoneFilter_release.click();
-        }
-        else {
+        } else {
             valueMilestoneFilter_beta_release.click();
         }
         waitTableLoadData();
@@ -287,22 +286,67 @@ public class TaskPage {
         waitTableLoadData();
     }
 
-    public String filterByDeadline(String deadline) throws InterruptedException {
+    public void clickDatePicker_Day(long day){
+        WebElement dayElement = driver.findElement(By.xpath("//div[@class='datepicker-days']//td[(@class='day' or @class='today day') and text()='"+ day +"']"));
+        dayElement.click();
+    }
+
+    public void clickDatePicker_Month(String monthText, long day){
+        WebElement monthElement = driver.findElement(By.xpath("//div[@class='datepicker-months']//span[text()='"+ monthText + "']"));
+        monthElement.click();
+        this.clickDatePicker_Day(day);
+    }
+
+    public void clickDatePicker_Year(long year, String monthText, long day){
+        WebElement yearElement = driver.findElement(By.xpath("//div[@class='datepicker-years']//span[text()='"+ year + "']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", yearElement);
+        this.clickDatePicker_Month(monthText, day);
+    }
+
+    public void selectDate(Date date) throws InterruptedException {
+        long day = Integer.parseInt(new SimpleDateFormat("dd").format(date));
+        long month = Integer.parseInt(new SimpleDateFormat("MM").format(date));
+        long currentMonth = Integer.parseInt(new SimpleDateFormat("MM").format(new Date()));
+
+        if(currentMonth - month == 0 ){
+            this.clickDatePicker_Day(day);
+            return;
+        }
+
+        long year = Integer.parseInt(new SimpleDateFormat("yyyy").format(date));
+        long currentYear = Integer.parseInt(new SimpleDateFormat("yyyy").format(new Date()));
+        String monthText = new SimpleDateFormat("MMM", Locale.ENGLISH).format(date);
+        if(currentYear - year == 0 ){
+            WebElement daySwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class,'datepicker-switch')]"));
+            daySwitch.click();
+            this.clickDatePicker_Month(monthText, day);
+            return;
+        }
+        if(Math.floor(currentYear/10) - Math.floor(year/10) == 0 ){
+            WebElement daySwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class='datepicker-switch')]"));
+            daySwitch.click();
+            WebElement monthSwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class='datepicker-switch')]"));
+            monthSwitch.click();
+            this.clickDatePicker_Year(year, monthText, day);
+            return;
+        }
+
+        double yearDecades = Math.floor(year/10)*10;
+        WebElement yearDecadesElement = driver.findElement(By.xpath("//div[@class='datepicker-decades']//span[text()='"+ yearDecades + "']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", yearDecadesElement);
+        this.clickDatePicker_Year(year, monthText, day);
+    }
+
+    public String filterByDeadline(String deadlineType) throws InterruptedException {
         // show filter list
         showFilterButton.click();
 
         // senKey Related to
         dropdownDeadlineFilter.click();
-        String xpath = "//div[contains(@class,'datepicker-custom-list')]/div[text()='"+ deadline + "']";
+        String xpath = "//div[contains(@class,'datepicker-custom-list')]/div[text()='" + deadlineType + "']";
         WebElement element = driver.findElement(By.xpath(xpath));
-        String elementData = "";
-        if(deadline == "Custom"){
-            element.click();
-        }
-        else {
-            elementData = element.getAttribute("data-value");
-            element.click();
-        }
+        String elementData = element.getAttribute("data-value");
+        element.click();
         waitTableLoadData();
 
         // set default value for TeamMember filter
@@ -313,30 +357,75 @@ public class TaskPage {
         return elementData;
     }
 
-    public void filterByStatus(){
+    //todo
+    public void filterByDeadline(String deadlineType, Date deadline) throws InterruptedException {
+        // show filter list
+        showFilterButton.click();
+
+        // senKey Related to
+        dropdownDeadlineFilter.click();
+        String xpath = "//div[contains(@class,'datepicker-custom-list')]/div[text()='" + deadlineType + "']";
+        WebElement element = driver.findElement(By.xpath(xpath));
+        element.click();
+        selectDate(deadline);
+        waitTableLoadData();
+
+        // set default value for TeamMember filter
+        dropdownTeamMemberFilter.click();
+        inputSearchTeamMemberFilter.sendKeys("Team member");
+        inputSearchTeamMemberFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
+    }
+
+    public void filterByStatus(String status) throws InterruptedException {
+        // show filter list
+        showFilterButton.click();
+
+        // senKey Related to
+        dropdownStatusFilter.click();
+        String xpath = "//ul[@class='list-group']//li";
+        List<WebElement> elements = driver.findElements(By.xpath(xpath));
+        for(WebElement element:elements){
+            if(element.getText().equals(status)){
+                if(!element.getAttribute("class").contains("active")){
+                    element.click();
+                }
+            }
+            else if(element.getAttribute("class").contains("active")){
+                element.click();
+            }
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
+            wait.until(ExpectedConditions.elementToBeClickable(element));
+        }
+        waitTableLoadData();
+
+        // set default value for TeamMember filter
+        dropdownTeamMemberFilter.click();
+        inputSearchTeamMemberFilter.sendKeys("Team member");
+        inputSearchTeamMemberFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
+    }
+
+    public void addNewFilter() {
 
     }
 
-    public void addNewFilter(){
+    public void editFilter() {
 
     }
 
-    public void editFilter(){
-
-    }
-
-    public void deleteFilter(){
+    public void deleteFilter() {
 
     }
 
     // auth = huy
-    public void searchBy(){
+    public void searchBy() {
 
     }
 
 
     // auth = chau
-    public void addTask(){
+    public void addTask() {
 
     }
 }
