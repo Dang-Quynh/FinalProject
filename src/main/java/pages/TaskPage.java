@@ -48,14 +48,10 @@ public class TaskPage {
     WebElement dropdownLabelFilter;
     @FindBy(id = "s2id_autogen16_search")
     WebElement inputSearchLabelFilter;
-    @FindBy(id = "s2id_autogen17")
+    @FindBy(xpath = "//button[@name='deadline']")
     WebElement dropdownDeadlineFilter;
-    @FindBy(id = "s2id_autogen18_search")
-    WebElement inputSearchDeadlineFilter;
-    @FindBy(id = "s2id_autogen19")
+    @FindBy(xpath = "//button[@name='deadline']")
     WebElement dropdownStatusFilter;
-    @FindBy(id = "s2id_autogen20_search")
-    WebElement inputSearchStatusFilter;
 
     @FindBy(xpath = "//a[text()=' Add task']")
     WebElement addTaskBtn;
@@ -269,8 +265,30 @@ public class TaskPage {
         waitTableLoadData();
     }
 
-    public void filterByDeadline(){
+    public String filterByDeadline(String deadline) throws InterruptedException {
+        // show filter list
+        showFilterButton.click();
 
+        // senKey Related to
+        dropdownDeadlineFilter.click();
+        String xpath = "//div[contains(@class,'datepicker-custom-list')]/div[text()='"+ deadline + "']";
+        WebElement element = driver.findElement(By.xpath(xpath));
+        String elementData = "";
+        if(deadline == "Custom"){
+            element.click();
+        }
+        else {
+            elementData = element.getAttribute("data-value");
+            element.click();
+        }
+        waitTableLoadData();
+
+        // set default value for TeamMember filter
+        dropdownTeamMemberFilter.click();
+        inputSearchTeamMemberFilter.sendKeys("Team member");
+        inputSearchTeamMemberFilter.sendKeys(Keys.TAB);
+        waitTableLoadData();
+        return elementData;
     }
 
     public void filterByStatus(){
