@@ -45,8 +45,9 @@ public class CommonBase {
     public WebDriver initChromeDriver() throws InterruptedException {
 //        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
         System.out.println("Launching chrome ...");
-        WebDriverManager.chromedriver().clearDriverCache();
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager webDriverManager = WebDriverManager.chromedriver();
+        webDriverManager.clearDriverCache();
+        webDriverManager.setup();
 
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--remote-allow-origins=*", "--headless");
@@ -60,8 +61,10 @@ public class CommonBase {
 
     public WebDriver initFirefoxDriver() throws InterruptedException {
         System.out.println("Launching Firefox ...");
-        WebDriverManager.firefoxdriver().clearDriverCache();
-        WebDriverManager.firefoxdriver().setup();
+
+        WebDriverManager webDriverManager = WebDriverManager.firefoxdriver();
+        webDriverManager.clearDriverCache();
+        webDriverManager.setup();
 
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--remote-allow-origins=*", "--headless");
@@ -75,8 +78,9 @@ public class CommonBase {
 
     public WebDriver initEdgeDriver() throws InterruptedException {
         System.out.println("Launching edge ...");
-        WebDriverManager.edgedriver().clearDriverCache();
-        WebDriverManager.edgedriver().setup();
+        WebDriverManager webDriverManager = WebDriverManager.edgedriver();
+        webDriverManager.clearDriverCache();
+        webDriverManager.setup();
 
         EdgeOptions options = new EdgeOptions();
         options.addArguments("--remote-allow-origins=*", "--headless");

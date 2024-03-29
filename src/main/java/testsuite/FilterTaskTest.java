@@ -2,7 +2,10 @@ package testsuite;
 
 import common.CommonBase;
 import constant.CT_Common;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -11,7 +14,9 @@ import org.testng.annotations.Test;
 import pages.LoginPage;
 import pages.TaskPage;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class FilterTaskTest extends CommonBase {
     @BeforeMethod
@@ -26,10 +31,11 @@ public class FilterTaskTest extends CommonBase {
         // login
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginFunction("admin@demo.com","riseDemo");
-
-
         // navigate task screen
         clickElement(CT_Common.TASK_MENU);
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("task-table")));
     }
 
     private boolean checkListTaskFilterByRelatedTo(String relatedTo){
@@ -46,98 +52,197 @@ public class FilterTaskTest extends CommonBase {
     }
 
     @Test
-    public void filterByRelatedTo_Project() {
+    public void filterByRelatedTo_Project() throws InterruptedException {
         String relatedTo = "Project";
         TaskPage taskPage = new TaskPage(driver);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Client() {
+    public void filterByRelatedTo_Client() throws InterruptedException {
         String relatedTo = "Client";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Contract() {
+    public void filterByRelatedTo_Contract() throws InterruptedException {
         String relatedTo = "Contract";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Estimate() {
+    public void filterByRelatedTo_Estimate() throws InterruptedException {
         String relatedTo = "Estimate";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Expense() {
+    public void filterByRelatedTo_Expense() throws InterruptedException {
         String relatedTo = "Expense";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Invoice() {
+    public void filterByRelatedTo_Invoice() throws InterruptedException {
         String relatedTo = "Invoice";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Lead() {
+    public void filterByRelatedTo_Lead() throws InterruptedException {
         String relatedTo = "Lead";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Order() {
+    public void filterByRelatedTo_Order() throws InterruptedException {
         String relatedTo = "Order";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Proposal() {
+    public void filterByRelatedTo_Proposal() throws InterruptedException {
         String relatedTo = "Proposal";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Subscription() {
+    public void filterByRelatedTo_Subscription() throws InterruptedException {
         String relatedTo = "Subscription";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
     @Test
-    public void filterByRelatedTo_Ticket() {
+    public void filterByRelatedTo_Ticket() throws InterruptedException {
         String relatedTo = "Ticket";
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForRelatedToFilter(relatedTo);
+        Thread.sleep(1000);
         taskPage.filterByRelatedTo(relatedTo);
+        scrollToElement(CT_Common.PAGINATION);
         Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
     }
 
-//    @Test
-//    public void filterByProject() {
-//        String relatedTo = "Subscription";
-//        TaskPage taskPage = new TaskPage(driver);
-//        taskPage.filterByRelatedTo(relatedTo);
-//        Assert.assertTrue(checkListTaskFilterByRelatedTo(relatedTo));
-//    }
+    private boolean checkListTaskFilterByProjectName(String text){
+        List<WebElement> elements = getElements(CT_Common.RELATED_TO_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+                if(!element.getText().equals(text)){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    @Test
+    public void filterByProject() throws InterruptedException {
+        String projectName = "Mobile App Development";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByProject(projectName);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByProjectName(projectName));
+    }
+
+    private boolean checkListTaskFilterByMilestone(String text){
+        List<WebElement> elements = getElements(CT_Common.MILESTONE_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+                if(!element.getText().equals(text)){
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+
+    @Test
+    public void filterByMilestone_Release() throws InterruptedException {
+        String milestone = "Release";
+        String projectName = "Mobile App Development";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByMilestone(projectName, milestone);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByMilestone(milestone));
+    }
+
+    @Test
+    public void filterByMilestone_BetaRelease() throws InterruptedException {
+        String milestone = "Beta Release";
+        String projectName = "Mobile App Development";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByMilestone(projectName, milestone);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByMilestone(milestone));
+    }
+
+    private boolean checkListTaskFilterByTeamMember(String text){
+        List<WebElement> elements = getElements(CT_Common.ASSIGNED_TO_VALUE_COLUMNS);
+        if(elements.size() > 0){
+            for(WebElement element:elements){
+                if(!element.getText().trim().equals(text)){
+                    return false;
+                }
+            }
+
+        }
+        return true;
+    }
+
+    @Test
+    public void filterByTeamMember() throws InterruptedException {
+        String name = "Sara Ann";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.filterByTeamMember(name);
+        scrollToElement(CT_Common.PAGINATION);
+        Assert.assertTrue(checkListTaskFilterByTeamMember(name));
+    }
 }
