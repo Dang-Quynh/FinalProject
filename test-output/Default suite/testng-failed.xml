@@ -6,7 +6,7 @@
       <class name="testsuite.SearchTaskTest">
         <methods>
           <include name="openBrowser"/>
-          <include name="hidebyid"/>
+          <include name="addmutipletaskfail2"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- testsuite.SearchTaskTest -->

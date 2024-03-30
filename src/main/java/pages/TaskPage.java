@@ -20,7 +20,15 @@ public class TaskPage {
     @FindBy(xpath="//li[text()='Milestone']") WebElement Hide_milestone;
     @FindBy(xpath="//li[text()='Related to']") WebElement Hide_relateto;
     @FindBy(xpath="//li[text()='Assigned to']") WebElement Hide_assignedto;
+    @FindBy(xpath="//li[text()='Status']") WebElement Hide_status;
 
+    @FindBy(xpath="//a[@title='Add multiple tasks']") WebElement Add_addmultipletasks;
+    @FindBy(xpath="//input[@name='title']") WebElement Add_title;
+    @FindBy(xpath="//span[@class='select2-chosen' and @id='select2-chosen-28']") WebElement Add_dropdownproject;
+    @FindBy(xpath="//li[@class='select2-results-dept-0 select2-result select2-result-selectable'][2]") WebElement Add_project;
+    @FindBy(xpath="//button[@id='save-and-add-button']") WebElement Add_save;
+    //@FindBy(xpath="//div[@class='modal-dialog modal-lg']/descendant::button[@class='btn-close']") WebElement Add_close;
+    
     
     public TaskPage(WebDriver commonDriver) 
 	{
@@ -44,19 +52,61 @@ public class TaskPage {
 //		JavascriptExecutor js = (JavascriptExecutor)driver;
 //		Thread.sleep(2000);
 		Hide_hidebutton.click();
+		Thread.sleep(2000);
 		Hide_id.click();		
 	}
-
-
-
-
-
-//    public void addMutipletask(String key) throws InterruptedException
-//    {
+    
+    public void HideTitle() throws InterruptedException
+    {
 //    	taskMenu.click();
 //		JavascriptExecutor js = (JavascriptExecutor)driver;
 //		Thread.sleep(2000);
-//		Search_searchbox.sendKeys(key);
-//	}
+		Hide_hidebutton.click();
+		Thread.sleep(2000);
+		Hide_title.click();		
+	}
+
+    public void HideMilestone() throws InterruptedException
+    {
+//    	taskMenu.click();
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		Thread.sleep(2000);
+		Hide_hidebutton.click();
+		Thread.sleep(2000);
+		Hide_milestone.click();		
+	}
+
+    public void HideRelateto() throws InterruptedException
+    {
+//    	taskMenu.click();
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		Thread.sleep(2000);
+		Hide_hidebutton.click();
+		Thread.sleep(2000);
+		Hide_relateto.click();		
+	}
+    public void HideStatus() throws InterruptedException
+    {
+//    	taskMenu.click();
+//		JavascriptExecutor js = (JavascriptExecutor)driver;
+//		Thread.sleep(2000);
+		Hide_hidebutton.click();
+		Thread.sleep(2000);
+		Hide_status.click();		
+	}
+    
+    public void addMutipletask(String title) throws InterruptedException
+    {
+    	taskMenu.click();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		Thread.sleep(2000);
+		js.executeScript("arguments[0].click();", Add_addmultipletasks);
+		Thread.sleep(3000);
+		Add_title.sendKeys(title);
+		Add_dropdownproject.click();
+		Thread.sleep(1000);
+		Add_project.click();
+		Add_save.click();
+	}
     
 }
