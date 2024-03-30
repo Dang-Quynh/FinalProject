@@ -16,7 +16,6 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 public class FilterTaskTest extends CommonBase {
@@ -319,23 +318,30 @@ public class FilterTaskTest extends CommonBase {
     }
 
     private boolean checkListTaskFilterByDeadline(String text, String deadlineValue) throws ParseException {
+        SimpleDateFormat formatter1 = new SimpleDateFormat("dd-MM-yyyy");
+        SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
+        long currentTime = formatter2.parse(formatter2.format(new Date())).getTime();
+        long deadlineTime = formatter2.parse(deadlineValue).getTime();
+
+        if(text == "Custom" && deadlineTime < currentTime){
+            if(driver.findElements(CT_Common.DEADLINE_VALUE_COLUMNS).size() > 0){
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
         List<WebElement> elements = getElements(CT_Common.DEADLINE_VALUE_COLUMNS);
         if(elements.size() > 0){
-            SimpleDateFormat formatter1 = new SimpleDateFormat("dd-MM-yyyy");
-            SimpleDateFormat formatter2 = new SimpleDateFormat("yyyy-MM-dd");
-
             for(WebElement element:elements){
                 long elementDeadlineTime = formatter1.parse(element.getText()).getTime();
-                long currentTime = formatter2.parse(formatter2.format(new Date())).getTime();
-
                 if(text == "Custom"){
-                    long deadlineTime = formatter2.parse(deadlineValue).getTime();
                     if(!((deadlineTime == currentTime && elementDeadlineTime == deadlineTime) || (elementDeadlineTime <= deadlineTime && elementDeadlineTime > currentTime))){
                         return false;
                     }
                 }
                 else if(text == "Today" || text == "Tomorrow"){
-                    long deadlineTime = formatter2.parse(deadlineValue).getTime();
                     if(elementDeadlineTime != deadlineTime){
                         return false;
                     }
@@ -346,7 +352,6 @@ public class FilterTaskTest extends CommonBase {
                     }
                 }
                 else {
-                    long deadlineTime = formatter2.parse(deadlineValue).getTime();
                     if( !(elementDeadlineTime <= deadlineTime && elementDeadlineTime > currentTime)){
                         return false;
                     }
@@ -370,7 +375,8 @@ public class FilterTaskTest extends CommonBase {
     public void filterByDeadline_Today() throws InterruptedException, ParseException {
         String deadline = "Today";
         TaskPage taskPage = new TaskPage(driver);
-        taskPage.addTaskDataForDeadlineFilter_Today();
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        taskPage.addTaskDataForDeadlineFilter(formatter.format(new Date()));
         Thread.sleep(1000);
         String deadlineData = taskPage.filterByDeadline(deadline);
         scrollToElement(CT_Common.PAGINATION);
@@ -405,16 +411,35 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByDeadline(deadline, deadlineData));
     }
 
-    //todo
-    @Test(priority = 2)
-    public void filterByDeadline_Custom() throws InterruptedException, ParseException {
+    private void filterByDeadline_Custom(Date testDate) throws InterruptedException, ParseException {
         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        String deadline = "2024-04-02";
-        Date date = formatter.parse(deadline);
+        Date date = formatter.parse(formatter.format(testDate));
         TaskPage taskPage = new TaskPage(driver);
+        taskPage.addTaskDataForDeadlineFilter(new SimpleDateFormat("dd-MM-yyyy").format(testDate));
+        Thread.sleep(1000);
         taskPage.filterByDeadline("Custom", date);
         scrollToElement(CT_Common.PAGINATION);
-        Assert.assertTrue(checkListTaskFilterByLabel(deadline));
+        Assert.assertTrue(checkListTaskFilterByDeadline("Custom",formatter.format(testDate)));
+    }
+
+    @Test(priority = 2) // deadline is currentDay
+    public void filterByDeadline_Custom_Equal_CurrentDay() throws InterruptedException, ParseException {
+        Date testDate = new Date();
+        this.filterByDeadline_Custom(testDate);
+    }
+
+    @Test(priority = 2) // deadline is currentDay + 3
+    public void filterByDeadline_Custom_greater_CurrentDay() throws InterruptedException, ParseException {
+        long dayMiliseconds = 24*60*60*1000*3;
+        Date testDate = new Date(new Date().getTime() + dayMiliseconds);
+        this.filterByDeadline_Custom(testDate);
+    }
+
+    @Test(priority = 2)// deadline is currentDay - 3
+    public void filterByDeadline_Custom_Less_CurrentDay() throws InterruptedException, ParseException {
+        long dayMiliseconds = 24*60*60*1000*3;
+        Date testDate = new Date(new Date().getTime() - dayMiliseconds);
+        this.filterByDeadline_Custom(testDate);
     }
 
 

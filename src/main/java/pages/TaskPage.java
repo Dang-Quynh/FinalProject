@@ -268,7 +268,7 @@ public class TaskPage {
         waitTableLoadData();
     }
 
-    public void addTaskDataForDeadlineFilter_Today() throws InterruptedException {
+    public void addTaskDataForDeadlineFilter(String date) throws InterruptedException {
         addTaskBtn.click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Title']")));
@@ -280,8 +280,7 @@ public class TaskPage {
         addTask_ClientDropdown.click();
         addTask_SelectSearchInput.sendKeys("a");
         addTask_SelectSearchInput.sendKeys(Keys.TAB);
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
-        addTask_DeadlineInput.sendKeys(formatter.format(new Date()));
+        addTask_DeadlineInput.sendKeys(date);
         addTask_SaveBtn.click();
         waitTableLoadData();
     }
@@ -323,14 +322,20 @@ public class TaskPage {
             return;
         }
         if(Math.floor(currentYear/10) - Math.floor(year/10) == 0 ){
-            WebElement daySwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class='datepicker-switch')]"));
+            WebElement daySwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class,'datepicker-switch')]"));
             daySwitch.click();
-            WebElement monthSwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class='datepicker-switch')]"));
+            WebElement monthSwitch = driver.findElement(By.xpath("//div[@class='datepicker-months']//th[contains(@class,'datepicker-switch')]"));
             monthSwitch.click();
             this.clickDatePicker_Year(year, monthText, day);
             return;
         }
 
+        WebElement daySwitch = driver.findElement(By.xpath("//div[@class='datepicker-days']//th[contains(@class,'datepicker-switch')]"));
+        daySwitch.click();
+        WebElement monthSwitch = driver.findElement(By.xpath("//div[@class='datepicker-months']//th[contains(@class,'datepicker-switch')]"));
+        monthSwitch.click();
+        WebElement yearSwitch = driver.findElement(By.xpath("//div[@class='datepicker-years']//th[contains(@class,'datepicker-switch')]"));
+        yearSwitch.click();
         double yearDecades = Math.floor(year/10)*10;
         WebElement yearDecadesElement = driver.findElement(By.xpath("//div[@class='datepicker-decades']//span[text()='"+ yearDecades + "']"));
         ((JavascriptExecutor) driver).executeScript("arguments[0].click();", yearDecadesElement);
