@@ -16,4 +16,11 @@ public class CT_Common {
     public static By DEADLINE_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[4]");
     public static By STATUS_VALUE_COLUMNS = By.xpath("//table[@id='task-table']//tr//td[9]//a");
 
+    public static By MANAGE_FILTER_DROPDOWN = By.xpath("//button[contains(@class,'smart-filter-dropdown')]");
+    public static By MANAGE_FILTER_BUTTON = By.xpath("//a[contains(@class,'manage-filters-button')]");
+    public static By MANAGE_FILTER_TABLE_SEARCH = By.xpath("//div[@id='filters-table_filter']//input");
+    public static By MANAGE_FILTER_TABLE_TITLE = By.xpath("//table[@id='filters-table']//td[1]");
+    public static By MANAGE_FILTER_TABLE_TOTAL_ITEM = By.id("filters-table_info");
+    public static By ADD_FILTER_TITLE_ERROR = By.id("title-error");
+    public static String ADD_FILTER_TITLE_ERROR_TEXT = "This field is required.";
 }

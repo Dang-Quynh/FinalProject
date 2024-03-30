@@ -491,6 +491,44 @@ public class FilterTaskTest extends CommonBase {
         Assert.assertTrue(checkListTaskFilterByStatus(status));
     }
 
+    @Test(priority = 1)
+    public void addFilter_Success() throws InterruptedException {
+        String title = "filter 1";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.addNewFilter(title);
+        Thread.sleep(1000);
+        clickElement(CT_Common.MANAGE_FILTER_DROPDOWN);
+        Assert.assertTrue(isElementPresent(By.xpath("//a[contains(@class,'smart-filter-item') and text()='"+ title +"']")));
+    }
+
+    @Test(priority = 1)
+    public void addFilter_Fail() throws InterruptedException {
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.addNewFilter("");
+        Assert.assertEquals(CT_Common.ADD_FILTER_TITLE_ERROR_TEXT, getElement(CT_Common.ADD_FILTER_TITLE_ERROR).getText());
+    }
+
+    @Test(priority = 2)
+    public void editFilter() throws InterruptedException {
+        String title = "filter 1";
+        String newTitle = "filter 2";
+        TaskPage taskPage = new TaskPage(driver);
+        taskPage.editFilter(title, newTitle);
+        Thread.sleep(1000);
+        clickElement(CT_Common.MANAGE_FILTER_DROPDOWN);
+        Assert.assertTrue(isElementPresent(By.xpath("//a[contains(@class,'smart-filter-item') and text()='"+ newTitle +"']")));
+    }
+
+    @Test(priority = 3)
+    public void deleteFilter() throws InterruptedException {
+        String title = "filter 1";
+        TaskPage taskPage = new TaskPage(driver);
+        int sizeListFilterBeforeDelete = taskPage.deleteFilter(title);
+        Thread.sleep(1000);
+        int sizeListFilterAfterDelete = taskPage.getTotalItemFilter();
+        Assert.assertEquals(sizeListFilterBeforeDelete - 1, sizeListFilterAfterDelete);
+    }
+
     @AfterMethod
     private void closeDriver(){
 //        quitDriver(driver);

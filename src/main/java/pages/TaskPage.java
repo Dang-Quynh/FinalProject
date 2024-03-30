@@ -1,5 +1,6 @@
 package pages;
 
+import constant.CT_Common;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -17,7 +18,6 @@ public class TaskPage {
     private int initWaitTime = 10;
 
 //    Filter
-
     @FindBy(xpath = "//div[@id='task-table_wrapper']//button[contains(@class,'show-filter-form-button')]")
     WebElement showFilterButton;
     @FindBy(id = "")
@@ -89,6 +89,25 @@ public class TaskPage {
     WebElement addTask_DeadlineInput;
     @FindBy(xpath = "//button[@type='submit' and text()=' Save']")
     WebElement addTask_SaveBtn;
+
+    //add filter
+    @FindBy(xpath = "//button[contains(@class,'save-filter-button')]")
+    WebElement addFilterButton;
+    @FindBy(xpath = "//input[@name='title']")
+    WebElement addFilter_title;
+    @FindBy(xpath = "//button[text()=' Save']")
+    WebElement addFilter_save_button;
+
+    @FindBy(xpath = "//button[contains(@class,'smart-filter-dropdown')]")
+    WebElement manageFilterDropdown;
+    @FindBy(xpath = "//a[contains(@class,'manage-filters-button')]")
+    WebElement manageFilterButton;
+    @FindBy(xpath = "//div[@id='filters-table_filter']//input")
+    WebElement manageFilterTableSearch;
+    @FindBy(xpath = "//table[@id='filters-table']//td[4]//a[@title='Delete']")
+    WebElement filterItem_delete;
+    @FindBy(xpath = "//table[@id='filters-table']//td[4]//a[@title='Edit']")
+    WebElement filterItem_edit;
 
     public TaskPage(WebDriver driver) {
         this.driver = driver;
@@ -362,7 +381,7 @@ public class TaskPage {
         return elementData;
     }
 
-    //todo
+
     public void filterByDeadline(String deadlineType, Date deadline) throws InterruptedException {
         // show filter list
         showFilterButton.click();
@@ -411,16 +430,58 @@ public class TaskPage {
         waitTableLoadData();
     }
 
-    public void addNewFilter() {
-
+    public void addNewFilter(String title) throws InterruptedException {
+        // show filter list
+        showFilterButton.click();
+        // open add filter popup
+        addFilterButton.click();
+        Thread.sleep(1000);
+        addFilter_title.sendKeys(title);
+        addFilter_save_button.click();
     }
 
-    public void editFilter() {
-
+    public void editFilter(String title, String newTitle) throws InterruptedException {
+        manageFilterDropdown.click();
+        manageFilterButton.click();
+        Thread.sleep(1000);
+        manageFilterTableSearch.sendKeys(title);
+        filterItem_edit.click();
+        Thread.sleep(1000);
+        addFilter_title.clear();
+        addFilter_title.sendKeys(newTitle);
+        addFilter_save_button.click();
     }
 
-    public void deleteFilter() {
+    private boolean isInteger(String str) {
+        try {
+            Integer.parseInt(str);
+            return true;
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+    }
 
+    public int getTotalItemFilter() {
+        String totalItemText = driver.findElement(CT_Common.MANAGE_FILTER_TABLE_TOTAL_ITEM).getText();
+        int totalItem = 0;
+        for(int i = totalItemText.length() -1; i>=0; i--){
+            if(isInteger(String.valueOf(totalItemText.charAt(i)))){
+                totalItem = Integer.parseInt(String.valueOf(totalItemText.charAt(i)));
+                break;
+            }
+        }
+        return totalItem;
+    }
+
+    public int deleteFilter(String title) throws InterruptedException {
+        manageFilterDropdown.click();
+        manageFilterButton.click();
+        Thread.sleep(1000);
+        manageFilterTableSearch.sendKeys(title);
+        int totalItem =this.getTotalItemFilter();
+        filterItem_delete.click();
+        Thread.sleep(1000);
+        return totalItem;
     }
 
     // auth = huy
