@@ -121,9 +121,15 @@ public class SearchTaskTest extends CommonBase {
 		task.HideID();
 		Thread.sleep(2000);
 		By taskID = By.xpath("//td[@class=' w10p']//a[@data-id='3290']");
-		isElementPresent(taskID);
+		//isElementPresent(taskID);
+		assertFail(isElementPresent(taskID));
 	}
-	
+
+	private void assertFail(boolean elementPresent) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@Test //hide by Title TC_18
 	public void hidebytitle() throws InterruptedException
 	{

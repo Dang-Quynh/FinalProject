@@ -18,15 +18,20 @@
     <classes>
       <class name="testsuite.SearchTaskTest">
         <methods>
+          <include name="searchTaskbyRelatedto"/>
+          <include name="hidebytitle"/>
+          <include name="searchTaskbyMilestone"/>
+          <include name="searchTaskbyID"/>
           <include name="openBrowser"/>
           <include name="addmutipletaskfail2"/>
           <include name="closeBrowser"/>
+          <include name="searchTaskbyTitle"/>
         </methods>
       </class> <!-- testsuite.SearchTaskTest -->
     </classes>
   </test> <!-- Run parallel test with multi edge(failed) -->
-  <test thread-count="5" name="Run parallel test with multi chome(failed)">
-    <parameter name="browserParamName" value="chome"/>
+  <test thread-count="5" name="Run parallel test with multi chrome(failed)">
+    <parameter name="browserParamName" value="chrome"/>
     <classes>
       <class name="testsuite.SearchTaskTest">
         <methods>
@@ -47,5 +52,5 @@
         </methods>
       </class> <!-- testsuite.SearchTaskTest -->
     </classes>
-  </test> <!-- Run parallel test with multi chome(failed) -->
+  </test> <!-- Run parallel test with multi chrome(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->
