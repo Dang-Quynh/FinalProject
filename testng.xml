@@ -2,8 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite">
 
-	<test name="Run Parallel test Firefox">
-		<parameter name="browser" value="firefox"></parameter>
+	<test name="Run Parallel test Chrome">
+		<parameter name="browser" value="chrome"></parameter>
 		<classes>
 			<class name="testsuite.FilterTaskTest" />
 		</classes>
@@ -16,10 +16,10 @@
 		</classes>
 	</test>
 
-	<test name="Run Parallel test Chrome">
-		<parameter name="browser" value="chrome"></parameter>
+	<test name="Run Parallel test Firefox">
+		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-            <class name="testsuite.FilterTaskTest" />
+			<class name="testsuite.FilterTaskTest" />
 		</classes>
 	</test>
 

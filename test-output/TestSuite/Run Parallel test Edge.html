@@ -1,0 +1,259 @@
+<html>
+<head>
+<title>TestNG:  Run Parallel test Edge</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Run Parallel test Edge</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun Mar 31 09:47:45 ICT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>689 seconds (689317 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByPriority_Minor()'><b>filterByPriority_Minor</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.addFilter_Fail()'><b>addFilter_Fail</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>1</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByPriority_Major()'><b>filterByPriority_Major</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Estimate()'><b>filterByRelatedTo_Estimate</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByMilestone_Release()'><b>filterByMilestone_Release</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>4</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_In7Days()'><b>filterByDeadline_In7Days</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_Custom_Less_CurrentDay()'><b>filterByDeadline_Custom_Less_CurrentDay</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByPriority_Critical()'><b>filterByPriority_Critical</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Lead()'><b>filterByRelatedTo_Lead</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_Tomorrow()'><b>filterByDeadline_Tomorrow</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Project()'><b>filterByRelatedTo_Project</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Subscription()'><b>filterByRelatedTo_Subscription</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_In15Days()'><b>filterByDeadline_In15Days</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_Today()'><b>filterByDeadline_Today</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Expense()'><b>filterByRelatedTo_Expense</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByMilestone_BetaRelease()'><b>filterByMilestone_BetaRelease</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>4</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByTeamMember()'><b>filterByTeamMember</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>1</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Invoice()'><b>filterByRelatedTo_Invoice</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Ticket()'><b>filterByRelatedTo_Ticket</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByLabel()'><b>filterByLabel</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByStatus_Review()'><b>filterByStatus_Review</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Contract()'><b>filterByRelatedTo_Contract</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByPriority_Blocker()'><b>filterByPriority_Blocker</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_Custom_Equal_CurrentDay()'><b>filterByDeadline_Custom_Equal_CurrentDay</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Proposal()'><b>filterByRelatedTo_Proposal</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.editFilter()'><b>editFilter</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>4</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Client()'><b>filterByRelatedTo_Client</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByStatus_InProgress()'><b>filterByStatus_InProgress</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.addFilter_Success()'><b>addFilter_Success</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_Expired()'><b>filterByDeadline_Expired</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByProject()'><b>filterByProject</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByDeadline_Custom_greater_CurrentDay()'><b>filterByDeadline_Custom_greater_CurrentDay</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByStatus_Done()'><b>filterByStatus_Done</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByRelatedTo_Order()'><b>filterByRelatedTo_Order</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>7</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.deleteFilter()'><b>deleteFilter</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest.filterByStatus_Todo()'><b>filterByStatus_Todo</b><br>Test class: testsuite.FilterTaskTest</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+</table><p>
+</body>
+</html>

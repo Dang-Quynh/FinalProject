@@ -23,4 +23,6 @@ public class CT_Common {
     public static By MANAGE_FILTER_TABLE_TOTAL_ITEM = By.id("filters-table_info");
     public static By ADD_FILTER_TITLE_ERROR = By.id("title-error");
     public static String ADD_FILTER_TITLE_ERROR_TEXT = "This field is required.";
+
+
 }

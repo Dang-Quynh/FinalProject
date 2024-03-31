@@ -67,7 +67,7 @@ public class CommonBase {
         webDriverManager.setup();
 
         FirefoxOptions options = new FirefoxOptions();
-        options.addArguments("--remote-allow-origins=*", "--headless");
+        options.addArguments("--remote-allow-origins=*");
         driver = new FirefoxDriver();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();
@@ -83,7 +83,7 @@ public class CommonBase {
         webDriverManager.setup();
 
         EdgeOptions options = new EdgeOptions();
-        options.addArguments("--remote-allow-origins=*", "--headless");
+        options.addArguments("--remote-allow-origins=*");
         driver = new EdgeDriver(options);
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
         driver.manage().window().maximize();

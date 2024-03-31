@@ -1,5 +1,6 @@
 package pages;
 
+import common.CommonBase;
 import constant.CT_Common;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
@@ -20,8 +21,6 @@ public class TaskPage {
 //    Filter
     @FindBy(xpath = "//div[@id='task-table_wrapper']//button[contains(@class,'show-filter-form-button')]")
     WebElement showFilterButton;
-    @FindBy(id = "")
-    WebElement dropdownQuickFilter;
 
     @FindBy(id = "s2id_autogen5")
     WebElement dropdownRelatedToFilter;
@@ -117,6 +116,7 @@ public class TaskPage {
     // auth = quynh
     public void addTaskDataForRelatedToFilter(String RelatedTo) throws InterruptedException {
         addTaskBtn.click();
+        Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Title']")));
         addTask_titleInput.sendKeys("addRelateToData");
@@ -289,6 +289,7 @@ public class TaskPage {
 
     public void addTaskDataForDeadlineFilter(String date) throws InterruptedException {
         addTaskBtn.click();
+        Thread.sleep(1000);
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@placeholder='Title']")));
         addTask_titleInput.sendKeys("addRelateToData");
@@ -482,16 +483,5 @@ public class TaskPage {
         filterItem_delete.click();
         Thread.sleep(1000);
         return totalItem;
-    }
-
-    // auth = huy
-    public void searchBy() {
-
-    }
-
-
-    // auth = chau
-    public void addTask() {
-
     }
 }

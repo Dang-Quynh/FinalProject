@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">TestSuite</th></tr>
+<tr><td><a href="#t0">Run Parallel test Chrome</a></td><td class="num">36</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">600.481</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Run Parallel test Edge</a></td><td class="num">36</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">689.317</td><td></td><td></td></tr>
+<tr><td><a href="#t2">Run Parallel test Firefox</a></td><td class="num">17</td><td class="num attn">19</td><td class="num">0</td><td class="num">0</td><td class="num">529.459</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">89</th><th class="num attn">19</th><th class="num">0</th><th class="num">0</th><th class="num">1.819.257</th><th colspan="2"></th></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Run Parallel test Chrome &#8212; passed</th></tr><tr class="passedeven"><td rowspan="36">testsuite.FilterTaskTest</td><td><a href="#m0">addFilter_Fail</a></td><td rowspan="1">1711853233152</td><td rowspan="1">1432</td></tr><tr class="passedeven"><td><a href="#m1">addFilter_Success</a></td><td rowspan="1">1711853218701</td><td rowspan="1">3151</td></tr><tr class="passedeven"><td><a href="#m2">deleteFilter</a></td><td rowspan="1">1711853261866</td><td rowspan="1">3489</td></tr><tr class="passedeven"><td><a href="#m3">editFilter</a></td><td rowspan="1">1711853246487</td><td rowspan="1">4385</td></tr><tr class="passedeven"><td><a href="#m4">filterByDeadline_Custom_Equal_CurrentDay</a></td><td rowspan="1">1711853100607</td><td rowspan="1">7585</td></tr><tr class="passedeven"><td><a href="#m5">filterByDeadline_Custom_Less_CurrentDay</a></td><td rowspan="1">1711853139143</td><td rowspan="1">7366</td></tr><tr class="passedeven"><td><a href="#m6">filterByDeadline_Custom_greater_CurrentDay</a></td><td rowspan="1">1711853120103</td><td rowspan="1">7383</td></tr><tr class="passedeven"><td><a href="#m7">filterByDeadline_Expired</a></td><td rowspan="1">1711853022904</td><td rowspan="1">2852</td></tr><tr class="passedeven"><td><a href="#m8">filterByDeadline_In15Days</a></td><td rowspan="1">1711853085764</td><td rowspan="1">2855</td></tr><tr class="passedeven"><td><a href="#m9">filterByDeadline_In7Days</a></td><td rowspan="1">1711853071455</td><td rowspan="1">2652</td></tr><tr class="passedeven"><td><a href="#m10">filterByDeadline_Today</a></td><td rowspan="1">1711853037603</td><td rowspan="1">7407</td></tr><tr class="passedeven"><td><a href="#m11">filterByDeadline_Tomorrow</a></td><td rowspan="1">1711853056561</td><td rowspan="1">3758</td></tr><tr class="passedeven"><td><a href="#m12">filterByLabel</a></td><td rowspan="1">1711853008541</td><td rowspan="1">2798</td></tr><tr class="passedeven"><td><a href="#m13">filterByMilestone_BetaRelease</a></td><td rowspan="1">1711852918409</td><td rowspan="1">4863</td></tr><tr class="passedeven"><td><a href="#m14">filterByMilestone_Release</a></td><td rowspan="1">1711852902177</td><td rowspan="1">4878</td></tr><tr class="passedeven"><td><a href="#m15">filterByPriority_Blocker</a></td><td rowspan="1">1711852993213</td><td rowspan="1">3475</td></tr><tr class="passedeven"><td><a href="#m16">filterByPriority_Critical</a></td><td rowspan="1">1711852976472</td><td rowspan="1">2883</td></tr><tr class="passedeven"><td><a href="#m17">filterByPriority_Major</a></td><td rowspan="1">1711852961190</td><td rowspan="1">2800</td></tr><tr class="passedeven"><td><a href="#m18">filterByPriority_Minor</a></td><td rowspan="1">1711852947592</td><td rowspan="1">2845</td></tr><tr class="passedeven"><td><a href="#m19">filterByProject</a></td><td rowspan="1">1711852887561</td><td rowspan="1">2898</td></tr><tr class="passedeven"><td><a href="#m20">filterByRelatedTo_Client</a></td><td rowspan="1">1711852692713</td><td rowspan="1">7647</td></tr><tr class="passedeven"><td><a href="#m21">filterByRelatedTo_Contract</a></td><td rowspan="1">1711852712105</td><td rowspan="1">7344</td></tr><tr class="passedeven"><td><a href="#m22">filterByRelatedTo_Estimate</a></td><td rowspan="1">1711852732178</td><td rowspan="1">7650</td></tr><tr class="passedeven"><td><a href="#m23">filterByRelatedTo_Expense</a></td><td rowspan="1">1711852751395</td><td rowspan="1">7547</td></tr><tr class="passedeven"><td><a href="#m24">filterByRelatedTo_Invoice</a></td><td rowspan="1">1711852770610</td><td rowspan="1">7354</td></tr><tr class="passedeven"><td><a href="#m25">filterByRelatedTo_Lead</a></td><td rowspan="1">1711852789830</td><td rowspan="1">7507</td></tr><tr class="passedeven"><td><a href="#m26">filterByRelatedTo_Order</a></td><td rowspan="1">1711852808432</td><td rowspan="1">7633</td></tr><tr class="passedeven"><td><a href="#m27">filterByRelatedTo_Project</a></td><td rowspan="1">1711852677878</td><td rowspan="1">3030</td></tr><tr class="passedeven"><td><a href="#m28">filterByRelatedTo_Proposal</a></td><td rowspan="1">1711852828975</td><td rowspan="1">7415</td></tr><tr class="passedeven"><td><a href="#m29">filterByRelatedTo_Subscription</a></td><td rowspan="1">1711852848408</td><td rowspan="1">7482</td></tr><tr class="passedeven"><td><a href="#m30">filterByRelatedTo_Ticket</a></td><td rowspan="1">1711852868424</td><td rowspan="1">7462</td></tr><tr class="passedeven"><td><a href="#m31">filterByStatus_Done</a></td><td rowspan="1">1711853201157</td><td rowspan="1">3210</td></tr><tr class="passedeven"><td><a href="#m32">filterByStatus_InProgress</a></td><td rowspan="1">1711853172717</td><td rowspan="1">3184</td></tr><tr class="passedeven"><td><a href="#m33">filterByStatus_Review</a></td><td rowspan="1">1711853186919</td><td rowspan="1">3206</td></tr><tr class="passedeven"><td><a href="#m34">filterByStatus_Todo</a></td><td rowspan="1">1711853157565</td><td rowspan="1">3320</td></tr><tr class="passedeven"><td><a href="#m35">filterByTeamMember</a></td><td rowspan="1">1711852935165</td><td rowspan="1">1710</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Run Parallel test Edge &#8212; passed</th></tr><tr class="passedeven"><td rowspan="36">testsuite.FilterTaskTest</td><td><a href="#m36">addFilter_Fail</a></td><td rowspan="1">1711853919622</td><td rowspan="1">1490</td></tr><tr class="passedeven"><td><a href="#m37">addFilter_Success</a></td><td rowspan="1">1711853902875</td><td rowspan="1">3232</td></tr><tr class="passedeven"><td><a href="#m38">deleteFilter</a></td><td rowspan="1">1711853951256</td><td rowspan="1">3364</td></tr><tr class="passedeven"><td><a href="#m39">editFilter</a></td><td rowspan="1">1711853934089</td><td rowspan="1">4501</td></tr><tr class="passedeven"><td><a href="#m40">filterByDeadline_Custom_Equal_CurrentDay</a></td><td rowspan="1">1711853755575</td><td rowspan="1">7600</td></tr><tr class="passedeven"><td><a href="#m41">filterByDeadline_Custom_Less_CurrentDay</a></td><td rowspan="1">1711853809845</td><td rowspan="1">7412</td></tr><tr class="passedeven"><td><a href="#m42">filterByDeadline_Custom_greater_CurrentDay</a></td><td rowspan="1">1711853776634</td><td rowspan="1">7789</td></tr><tr class="passedeven"><td><a href="#m43">filterByDeadline_Expired</a></td><td rowspan="1">1711853658293</td><td rowspan="1">2868</td></tr><tr class="passedeven"><td><a href="#m44">filterByDeadline_In15Days</a></td><td rowspan="1">1711853739317</td><td rowspan="1">2742</td></tr><tr class="passedeven"><td><a href="#m45">filterByDeadline_In7Days</a></td><td rowspan="1">1711853723658</td><td rowspan="1">2700</td></tr><tr class="passedeven"><td><a href="#m46">filterByDeadline_Today</a></td><td rowspan="1">1711853674550</td><td rowspan="1">7413</td></tr><tr class="passedeven"><td><a href="#m47">filterByDeadline_Tomorrow</a></td><td rowspan="1">1711853695606</td><td rowspan="1">3592</td></tr><tr class="passedeven"><td><a href="#m48">filterByLabel</a></td><td rowspan="1">1711853642543</td><td rowspan="1">2684</td></tr><tr class="passedeven"><td><a href="#m49">filterByMilestone_BetaRelease</a></td><td rowspan="1">1711853544566</td><td rowspan="1">4996</td></tr><tr class="passedeven"><td><a href="#m50">filterByMilestone_Release</a></td><td rowspan="1">1711853526577</td><td rowspan="1">4936</td></tr><tr class="passedeven"><td><a href="#m51">filterByPriority_Blocker</a></td><td rowspan="1">1711853626228</td><td rowspan="1">2863</td></tr><tr class="passedeven"><td><a href="#m52">filterByPriority_Critical</a></td><td rowspan="1">1711853609509</td><td rowspan="1">2938</td></tr><tr class="passedeven"><td><a href="#m53">filterByPriority_Major</a></td><td rowspan="1">1711853593361</td><td rowspan="1">2831</td></tr><tr class="passedeven"><td><a href="#m54">filterByPriority_Minor</a></td><td rowspan="1">1711853576981</td><td rowspan="1">2724</td></tr><tr class="passedeven"><td><a href="#m55">filterByProject</a></td><td rowspan="1">1711853509846</td><td rowspan="1">2768</td></tr><tr class="passedeven"><td><a href="#m56">filterByRelatedTo_Client</a></td><td rowspan="1">1711853300036</td><td rowspan="1">7560</td></tr><tr class="passedeven"><td><a href="#m57">filterByRelatedTo_Contract</a></td><td rowspan="1">1711853320682</td><td rowspan="1">7716</td></tr><tr class="passedeven"><td><a href="#m58">filterByRelatedTo_Estimate</a></td><td rowspan="1">1711853341450</td><td rowspan="1">7732</td></tr><tr class="passedeven"><td><a href="#m59">filterByRelatedTo_Expense</a></td><td rowspan="1">1711853362432</td><td rowspan="1">7571</td></tr><tr class="passedeven"><td><a href="#m60">filterByRelatedTo_Invoice</a></td><td rowspan="1">1711853384167</td><td rowspan="1">7831</td></tr><tr class="passedeven"><td><a href="#m61">filterByRelatedTo_Lead</a></td><td rowspan="1">1711853405447</td><td rowspan="1">7534</td></tr><tr class="passedeven"><td><a href="#m62">filterByRelatedTo_Order</a></td><td rowspan="1">1711853425859</td><td rowspan="1">7589</td></tr><tr class="passedeven"><td><a href="#m63">filterByRelatedTo_Project</a></td><td rowspan="1">1711853284815</td><td rowspan="1">2750</td></tr><tr class="passedeven"><td><a href="#m64">filterByRelatedTo_Proposal</a></td><td rowspan="1">1711853446523</td><td rowspan="1">7503</td></tr><tr class="passedeven"><td><a href="#m65">filterByRelatedTo_Subscription</a></td><td rowspan="1">1711853467150</td><td rowspan="1">7530</td></tr><tr class="passedeven"><td><a href="#m66">filterByRelatedTo_Ticket</a></td><td rowspan="1">1711853488599</td><td rowspan="1">7464</td></tr><tr class="passedeven"><td><a href="#m67">filterByStatus_Done</a></td><td rowspan="1">1711853886855</td><td rowspan="1">2933</td></tr><tr class="passedeven"><td><a href="#m68">filterByStatus_InProgress</a></td><td rowspan="1">1711853853153</td><td rowspan="1">3089</td></tr><tr class="passedeven"><td><a href="#m69">filterByStatus_Review</a></td><td rowspan="1">1711853870372</td><td rowspan="1">2703</td></tr><tr class="passedeven"><td><a href="#m70">filterByStatus_Todo</a></td><td rowspan="1">1711853830754</td><td rowspan="1">3036</td></tr><tr class="passedeven"><td><a href="#m71">filterByTeamMember</a></td><td rowspan="1">1711853562290</td><td rowspan="1">1521</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">Run Parallel test Firefox &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">testsuite.FilterTaskTest</td><td><a href="#m72">openDriver</a></td><td rowspan="1">1711854448642</td><td rowspan="1">35637</td></tr><tr><th colspan="4">Run Parallel test Firefox &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="37">testsuite.FilterTaskTest</td><td><a href="#m73">closeDriver</a></td><td rowspan="19">1711854484284</td><td rowspan="19">-1711854484284</td></tr><tr class="skippedeven"><td><a href="#m74">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m75">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m76">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m77">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m78">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m79">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m80">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m81">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m82">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m83">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m84">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m85">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m86">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m87">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m88">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m89">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m90">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m91">closeDriver</a></td></tr><tr class="skippedeven"><td><a href="#m92">openDriver</a></td><td rowspan="18">1711854484284</td><td rowspan="18">-1711854484284</td></tr><tr class="skippedeven"><td><a href="#m93">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m94">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m95">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m96">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m97">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m98">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m99">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m100">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m101">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m102">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m103">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m104">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m105">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m106">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m107">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m108">openDriver</a></td></tr><tr class="skippedeven"><td><a href="#m109">openDriver</a></td></tr><tr><th colspan="4">Run Parallel test Firefox &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="19">testsuite.FilterTaskTest</td><td><a href="#m110">addFilter_Fail</a></td><td rowspan="1">1711854484293</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m111">addFilter_Success</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m112">deleteFilter</a></td><td rowspan="1">1711854484293</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m113">editFilter</a></td><td rowspan="1">1711854484293</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m114">filterByDeadline_Custom_Equal_CurrentDay</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m115">filterByDeadline_Custom_Less_CurrentDay</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m116">filterByDeadline_Custom_greater_CurrentDay</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m117">filterByDeadline_Expired</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m118">filterByDeadline_In15Days</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m119">filterByDeadline_In7Days</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m120">filterByDeadline_Today</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m121">filterByDeadline_Tomorrow</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m122">filterByLabel</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m123">filterByPriority_Blocker</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m124">filterByPriority_Critical</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m125">filterByStatus_Done</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m126">filterByStatus_InProgress</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m127">filterByStatus_Review</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m128">filterByStatus_Todo</a></td><td rowspan="1">1711854484284</td><td rowspan="1">0</td></tr><tr><th colspan="4">Run Parallel test Firefox &#8212; passed</th></tr><tr class="passedeven"><td rowspan="17">testsuite.FilterTaskTest</td><td><a href="#m129">filterByMilestone_BetaRelease</a></td><td rowspan="1">1711854361689</td><td rowspan="1">7804</td></tr><tr class="passedeven"><td><a href="#m130">filterByMilestone_Release</a></td><td rowspan="1">1711854336459</td><td rowspan="1">7888</td></tr><tr class="passedeven"><td><a href="#m131">filterByPriority_Major</a></td><td rowspan="1">1711854443732</td><td rowspan="1">4187</td></tr><tr class="passedeven"><td><a href="#m132">filterByPriority_Minor</a></td><td rowspan="1">1711854406228</td><td rowspan="1">4120</td></tr><tr class="passedeven"><td><a href="#m133">filterByProject</a></td><td rowspan="1">1711854314043</td><td rowspan="1">4385</td></tr><tr class="passedeven"><td><a href="#m134">filterByRelatedTo_Client</a></td><td rowspan="1">1711853990872</td><td rowspan="1">10234</td></tr><tr class="passedeven"><td><a href="#m135">filterByRelatedTo_Contract</a></td><td rowspan="1">1711854018964</td><td rowspan="1">10538</td></tr><tr class="passedeven"><td><a href="#m136">filterByRelatedTo_Estimate</a></td><td rowspan="1">1711854047054</td><td rowspan="1">10286</td></tr><tr class="passedeven"><td><a href="#m137">filterByRelatedTo_Expense</a></td><td rowspan="1">1711854074807</td><td rowspan="1">10432</td></tr><tr class="passedeven"><td><a href="#m138">filterByRelatedTo_Invoice</a></td><td rowspan="1">1711854126649</td><td rowspan="1">10416</td></tr><tr class="passedeven"><td><a href="#m139">filterByRelatedTo_Lead</a></td><td rowspan="1">1711854158914</td><td rowspan="1">10353</td></tr><tr class="passedeven"><td><a href="#m140">filterByRelatedTo_Order</a></td><td rowspan="1">1711854186598</td><td rowspan="1">10457</td></tr><tr class="passedeven"><td><a href="#m141">filterByRelatedTo_Project</a></td><td rowspan="1">1711853969695</td><td rowspan="1">4207</td></tr><tr class="passedeven"><td><a href="#m142">filterByRelatedTo_Proposal</a></td><td rowspan="1">1711854214894</td><td rowspan="1">10281</td></tr><tr class="passedeven"><td><a href="#m143">filterByRelatedTo_Subscription</a></td><td rowspan="1">1711854256542</td><td rowspan="1">10404</td></tr><tr class="passedeven"><td><a href="#m144">filterByRelatedTo_Ticket</a></td><td rowspan="1">1711854286695</td><td rowspan="1">10390</td></tr><tr class="passedeven"><td><a href="#m145">filterByTeamMember</a></td><td rowspan="1">1711854387048</td><td rowspan="1">2204</td></tr></tbody>
+</table>
+<h2>Run Parallel test Chrome</h2><h3 id="m0">testsuite.FilterTaskTest#addFilter_Fail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testsuite.FilterTaskTest#addFilter_Success</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testsuite.FilterTaskTest#deleteFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testsuite.FilterTaskTest#editFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testsuite.FilterTaskTest#filterByDeadline_Custom_Equal_CurrentDay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testsuite.FilterTaskTest#filterByDeadline_Custom_Less_CurrentDay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testsuite.FilterTaskTest#filterByDeadline_Custom_greater_CurrentDay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testsuite.FilterTaskTest#filterByDeadline_Expired</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testsuite.FilterTaskTest#filterByDeadline_In15Days</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testsuite.FilterTaskTest#filterByDeadline_In7Days</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">testsuite.FilterTaskTest#filterByDeadline_Today</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">testsuite.FilterTaskTest#filterByDeadline_Tomorrow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">testsuite.FilterTaskTest#filterByLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">testsuite.FilterTaskTest#filterByMilestone_BetaRelease</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">testsuite.FilterTaskTest#filterByMilestone_Release</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">testsuite.FilterTaskTest#filterByPriority_Blocker</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">testsuite.FilterTaskTest#filterByPriority_Critical</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">testsuite.FilterTaskTest#filterByPriority_Major</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">testsuite.FilterTaskTest#filterByPriority_Minor</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">testsuite.FilterTaskTest#filterByProject</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">testsuite.FilterTaskTest#filterByRelatedTo_Client</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">testsuite.FilterTaskTest#filterByRelatedTo_Contract</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">testsuite.FilterTaskTest#filterByRelatedTo_Estimate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">testsuite.FilterTaskTest#filterByRelatedTo_Expense</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">testsuite.FilterTaskTest#filterByRelatedTo_Invoice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">testsuite.FilterTaskTest#filterByRelatedTo_Lead</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">testsuite.FilterTaskTest#filterByRelatedTo_Order</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">testsuite.FilterTaskTest#filterByRelatedTo_Project</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">testsuite.FilterTaskTest#filterByRelatedTo_Proposal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">testsuite.FilterTaskTest#filterByRelatedTo_Subscription</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">testsuite.FilterTaskTest#filterByRelatedTo_Ticket</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">testsuite.FilterTaskTest#filterByStatus_Done</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">testsuite.FilterTaskTest#filterByStatus_InProgress</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">testsuite.FilterTaskTest#filterByStatus_Review</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">testsuite.FilterTaskTest#filterByStatus_Todo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">testsuite.FilterTaskTest#filterByTeamMember</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run Parallel test Edge</h2><h3 id="m36">testsuite.FilterTaskTest#addFilter_Fail</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m37">testsuite.FilterTaskTest#addFilter_Success</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m38">testsuite.FilterTaskTest#deleteFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">testsuite.FilterTaskTest#editFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">testsuite.FilterTaskTest#filterByDeadline_Custom_Equal_CurrentDay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">testsuite.FilterTaskTest#filterByDeadline_Custom_Less_CurrentDay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">testsuite.FilterTaskTest#filterByDeadline_Custom_greater_CurrentDay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">testsuite.FilterTaskTest#filterByDeadline_Expired</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">testsuite.FilterTaskTest#filterByDeadline_In15Days</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">testsuite.FilterTaskTest#filterByDeadline_In7Days</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m46">testsuite.FilterTaskTest#filterByDeadline_Today</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">testsuite.FilterTaskTest#filterByDeadline_Tomorrow</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">testsuite.FilterTaskTest#filterByLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">testsuite.FilterTaskTest#filterByMilestone_BetaRelease</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">testsuite.FilterTaskTest#filterByMilestone_Release</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m51">testsuite.FilterTaskTest#filterByPriority_Blocker</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">testsuite.FilterTaskTest#filterByPriority_Critical</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m53">testsuite.FilterTaskTest#filterByPriority_Major</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m54">testsuite.FilterTaskTest#filterByPriority_Minor</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m55">testsuite.FilterTaskTest#filterByProject</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m56">testsuite.FilterTaskTest#filterByRelatedTo_Client</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m57">testsuite.FilterTaskTest#filterByRelatedTo_Contract</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m58">testsuite.FilterTaskTest#filterByRelatedTo_Estimate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m59">testsuite.FilterTaskTest#filterByRelatedTo_Expense</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m60">testsuite.FilterTaskTest#filterByRelatedTo_Invoice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m61">testsuite.FilterTaskTest#filterByRelatedTo_Lead</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m62">testsuite.FilterTaskTest#filterByRelatedTo_Order</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m63">testsuite.FilterTaskTest#filterByRelatedTo_Project</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m64">testsuite.FilterTaskTest#filterByRelatedTo_Proposal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m65">testsuite.FilterTaskTest#filterByRelatedTo_Subscription</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m66">testsuite.FilterTaskTest#filterByRelatedTo_Ticket</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m67">testsuite.FilterTaskTest#filterByStatus_Done</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m68">testsuite.FilterTaskTest#filterByStatus_InProgress</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m69">testsuite.FilterTaskTest#filterByStatus_Review</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m70">testsuite.FilterTaskTest#filterByStatus_Todo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m71">testsuite.FilterTaskTest#filterByTeamMember</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Run Parallel test Firefox</h2><h3 id="m72">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>firefox</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m73">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m74">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m75">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m76">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m77">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m78">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m79">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m80">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m81">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m82">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m83">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m84">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m85">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m86">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m87">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m88">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m89">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m90">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m91">testsuite.FilterTaskTest#closeDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m92">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m93">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m94">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m95">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m96">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m97">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m98">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m99">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m100">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m101">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m102">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m103">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m104">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m105">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m106">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m107">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m108">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m109">testsuite.FilterTaskTest#openDriver</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m110">testsuite.FilterTaskTest#addFilter_Fail</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m111">testsuite.FilterTaskTest#addFilter_Success</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m112">testsuite.FilterTaskTest#deleteFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m113">testsuite.FilterTaskTest#editFilter</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m114">testsuite.FilterTaskTest#filterByDeadline_Custom_Equal_CurrentDay</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m115">testsuite.FilterTaskTest#filterByDeadline_Custom_Less_CurrentDay</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m116">testsuite.FilterTaskTest#filterByDeadline_Custom_greater_CurrentDay</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m117">testsuite.FilterTaskTest#filterByDeadline_Expired</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m118">testsuite.FilterTaskTest#filterByDeadline_In15Days</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m119">testsuite.FilterTaskTest#filterByDeadline_In7Days</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m120">testsuite.FilterTaskTest#filterByDeadline_Today</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m121">testsuite.FilterTaskTest#filterByDeadline_Tomorrow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m122">testsuite.FilterTaskTest#filterByLabel</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m123">testsuite.FilterTaskTest#filterByPriority_Blocker</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m124">testsuite.FilterTaskTest#filterByPriority_Critical</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m125">testsuite.FilterTaskTest#filterByStatus_Done</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m126">testsuite.FilterTaskTest#filterByStatus_InProgress</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m127">testsuite.FilterTaskTest#filterByStatus_Review</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m128">testsuite.FilterTaskTest#filterByStatus_Todo</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Navigation timed out after 30000 ms
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_392&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [a7807856-30be-4b7b-b472-6a3e0d89b7ae, get {url=https://rise.fairsketch.com/signin}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 124.0.1, moz:accessibilityChecks: false, moz:buildID: 20240321230221, moz:debuggerAddress: 127.0.0.1:11739, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 20412, moz:profile: C:\Users\Admin\AppData\Loca..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://127.0.0.1:11739/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: a7807856-30be-4b7b-b472-6a3e0d89b7ae
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:295)
+	at testsuite.FilterTaskTest.openDriver(FilterTaskTest.java:26)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 31 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m129">testsuite.FilterTaskTest#filterByMilestone_BetaRelease</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m130">testsuite.FilterTaskTest#filterByMilestone_Release</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m131">testsuite.FilterTaskTest#filterByPriority_Major</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m132">testsuite.FilterTaskTest#filterByPriority_Minor</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m133">testsuite.FilterTaskTest#filterByProject</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m134">testsuite.FilterTaskTest#filterByRelatedTo_Client</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m135">testsuite.FilterTaskTest#filterByRelatedTo_Contract</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m136">testsuite.FilterTaskTest#filterByRelatedTo_Estimate</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m137">testsuite.FilterTaskTest#filterByRelatedTo_Expense</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m138">testsuite.FilterTaskTest#filterByRelatedTo_Invoice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m139">testsuite.FilterTaskTest#filterByRelatedTo_Lead</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m140">testsuite.FilterTaskTest#filterByRelatedTo_Order</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m141">testsuite.FilterTaskTest#filterByRelatedTo_Project</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m142">testsuite.FilterTaskTest#filterByRelatedTo_Proposal</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m143">testsuite.FilterTaskTest#filterByRelatedTo_Subscription</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m144">testsuite.FilterTaskTest#filterByRelatedTo_Ticket</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m145">testsuite.FilterTaskTest#filterByTeamMember</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestSuite]">
+  <test thread-count="5" name="Run Parallel test Firefox(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testsuite.FilterTaskTest">
+        <methods>
+          <include name="filterByStatus_InProgress"/>
+          <include name="addFilter_Fail"/>
+          <include name="filterByPriority_Blocker"/>
+          <include name="deleteFilter"/>
+          <include name="filterByPriority_Critical"/>
+          <include name="filterByStatus_Done"/>
+          <include name="addFilter_Success"/>
+          <include name="filterByDeadline_Custom_Equal_CurrentDay"/>
+          <include name="filterByDeadline_In15Days"/>
+          <include name="filterByStatus_Todo"/>
+          <include name="filterByDeadline_Expired"/>
+          <include name="filterByDeadline_In7Days"/>
+          <include name="filterByDeadline_Tomorrow"/>
+          <include name="filterByLabel"/>
+          <include name="closeDriver"/>
+          <include name="filterByDeadline_Custom_Less_CurrentDay"/>
+          <include name="editFilter"/>
+          <include name="filterByDeadline_Today"/>
+          <include name="openDriver"/>
+          <include name="filterByStatus_Review"/>
+          <include name="filterByDeadline_Custom_greater_CurrentDay"/>
+        </methods>
+      </class> <!-- testsuite.FilterTaskTest -->
+    </classes>
+  </test> <!-- Run Parallel test Firefox(failed) -->
+</suite> <!-- Failed suite [TestSuite] -->
