@@ -2,28 +2,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite">
 
-<!--	<test name="Run Parallel test Firefox">-->
-<!--		<parameter name="browser" value="firefox"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="automation.testsuite.Day18_BTVN1" />-->
-<!--			<class name="automation.testsuite.Day18_BTVN_2" />-->
-<!--		</classes>	-->
-<!--	</test>-->
+<test name="Run Parallel test Firefox">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="testsuite.AddTask" />
+		</classes>
+	</test>
 
-<!--	<test name="Run Parallel test Edge">-->
-<!--		<parameter name="browser" value="edge"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="automation.testsuite.Day18_BTVN1" />-->
-<!--			<class name="automation.testsuite.Day18_BTVN_2" />-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="Run Parallel test Edge">
+		<parameter name="browser" value="edge"></parameter>
+		<classes>
+            <class name="testsuite.AddTask" />
+		</classes>
+	</test>
 
-<!--	<test name="Run Parallel test Chrome">-->
-<!--		<parameter name="browser" value="chrome"></parameter>-->
-<!--		<classes>-->
-<!--			<class name="automation.testsuite.Day18_BTVN1" />-->
-<!--			<class name="automation.testsuite.Day18_BTVN_2" />-->
-<!--		</classes>-->
-<!--	</test>-->
+	<test name="Run Parallel test Chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+            <class name="testsuite.AddTask" />
+		</classes>
+	</test>
 
 </suite> <!-- Suite -->
