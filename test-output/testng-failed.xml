@@ -5,7 +5,6 @@
     <classes>
       <class name="testsuite.AddTask">
         <methods>
-          <include name="closeBrowser"/>
           <include name="browser"/>
           <include name="addTaskSuccess"/>
         </methods>

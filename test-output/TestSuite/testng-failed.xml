@@ -6,8 +6,9 @@
     <classes>
       <class name="testsuite.AddTask">
         <methods>
+          <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="addNewTask"/>
+          <include name="addTaskSuccess"/>
         </methods>
       </class> <!-- testsuite.AddTask -->
     </classes>
@@ -17,8 +18,9 @@
     <classes>
       <class name="testsuite.AddTask">
         <methods>
+          <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="addNewTask"/>
+          <include name="addTaskSuccess"/>
         </methods>
       </class> <!-- testsuite.AddTask -->
     </classes>
@@ -28,8 +30,9 @@
     <classes>
       <class name="testsuite.AddTask">
         <methods>
+          <include name="closeBrowser"/>
           <include name="openBrowser"/>
-          <include name="addNewTask"/>
+          <include name="addTaskSuccess"/>
         </methods>
       </class> <!-- testsuite.AddTask -->
     </classes>

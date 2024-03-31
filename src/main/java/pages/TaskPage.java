@@ -20,7 +20,7 @@ public class TaskPage {
 	private int initWaitTime = 30;
 	
 	@FindBy(xpath ="//span[text()='Tasks']") WebElement taskMenu;
-    @FindBy(xpath = "//input[@type='search']") WebElement Search_searchbox;
+    //@FindBy(xpath = "//input[@type='search']") WebElement Search_searchbox;
     @FindBy(xpath = "//a[text()=' Add task']") WebElement btnAddTask;
     
     @FindBy(xpath = "//button[@type='submit']") WebElement Save_button;
@@ -32,6 +32,12 @@ public class TaskPage {
     @FindBy(xpath = "//div[@id='s2id_project_id']") WebElement project_dropdown;
     @FindBy(xpath = "//div/input[@id='s2id_autogen28_search']") WebElement project_search;
     
+    @FindBy(xpath = "//div[@id='s2id_assigned_to']") WebElement assign_dropdown;
+    @FindBy(xpath = "//div/input[@id='s2id_autogen115_search']") WebElement assign_search;
+    
+    
+    @FindBy(xpath = "//div[@id='task-table_filter']//input[@placeholder='Search']") WebElement txtSearch;
+    
     @FindBy(id = "recurring") WebElement checkboxRecurring;
     
     @FindBy(xpath = "(//table[@id='task-table']//td[10]//a[@class='edit'])") WebElement edit_button;
@@ -39,6 +45,7 @@ public class TaskPage {
     @FindBy(xpath = "//button[@id='confirmDeleteButton']") WebElement confirmdelete_button;
     @FindBy(xpath = "(//button[@type='button'])[18]") WebElement canceldelete_button;
 
+    
 
     
 
@@ -65,7 +72,9 @@ public class TaskPage {
 		
 		
 		selectProject("Online Course Creation and Launch");
-		Thread.sleep(2000);
+		Thread.sleep(3000);
+		
+		
 		
 		JavascriptExecutor js1 = (JavascriptExecutor) driver;
 		js1.executeScript("arguments[0].scrollIntoView(true);", checkboxRecurring);
@@ -75,9 +84,21 @@ public class TaskPage {
 			{
 			checkboxRecurring.click();
 			}
-				
-		Save_button.click();
 		
+		
+		selectPerson("John Doe");
+		Thread.sleep(3000);
+	
+		
+		
+		Save_button.click();
+		Thread.sleep(3000);
+		
+
+//		taskMenu.click();
+//		Thread.sleep(3000);
+		
+		//txtSearch.sendKeys(task);
 	}
 
 	
@@ -85,9 +106,9 @@ public class TaskPage {
 		{
 			
 			//taskMenu.click();
-			searchBy("Chau test 123");
+			searchBy("31/3 test");
 			//searchBy("Chau test 123");
-			Thread.sleep(2000);
+			Thread.sleep(3000);
 	        // Click on the edit button to open the edit form
 			edit_button.click();
 			
@@ -104,7 +125,7 @@ public class TaskPage {
 		{
 			
 			//taskMenu.click();
-			searchBy("Edit Add game sound effects and music");
+			searchBy("Add company logo and contact details");
 			
 			Thread.sleep(2000);
 	        // Click on the delete button to open the delete popup
@@ -120,7 +141,7 @@ public class TaskPage {
 		{
 			
 			//taskMenu.click();
-			searchBy("Chau test 123");
+			searchBy("3615");
 			
 			Thread.sleep(2000);
 	        // Click on the delete button to open the delete popup
@@ -147,12 +168,27 @@ public class TaskPage {
 			
 		}
 
+		public void selectPerson(String assignName) {
+		    // Click on the project dropdown button to open the dropdown
+			assign_dropdown.click();
+
+	        // Clear any existing text in the input field
+			assign_search.clear();
+
+	        // Type the desired project name into the input field
+			assign_search.sendKeys(assignName);
+
+	        // Send TAB key to confirm the selection
+			assign_search.sendKeys(Keys.TAB);
+			
+		}
+		
 	    public void searchBy(String key) throws InterruptedException
 	    {
 	    	taskMenu.click();
 	    	Thread.sleep(2000);
 	    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(initWaitTime));
-	    	wait.until(ExpectedConditions.elementToBeClickable(Search_searchbox));
-			Search_searchbox.sendKeys(key);
+	    	wait.until(ExpectedConditions.elementToBeClickable(txtSearch));
+	    	txtSearch.sendKeys(key);
 		}
 }
