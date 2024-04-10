@@ -63,7 +63,7 @@ public class CommonBase {
         System.out.println("Launching Firefox ...");
 
         WebDriverManager webDriverManager = WebDriverManager.firefoxdriver();
-        webDriverManager.clearDriverCache();
+//        webDriverManager.clearDriverCache();
         webDriverManager.setup();
 
         FirefoxOptions options = new FirefoxOptions();
@@ -207,7 +207,7 @@ public class CommonBase {
         return absolutePath;
     }
 
-    public void quitDriver(WebDriver dr) {
+    public void closeDriver(WebDriver dr) {
         if (dr.toString().contains("null")) {
             System.out.print("All Browser windows are closed ");
         } else {
@@ -216,4 +216,15 @@ public class CommonBase {
             dr.close();
         }
     }
+
+    public void quitDriver(WebDriver dr) {
+        if (dr.toString().contains("null")) {
+            System.out.print("All Browser windows are closed ");
+        } else {
+            dr.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            dr.manage().deleteAllCookies();
+            dr.quit();
+        }
+    }
+
 }

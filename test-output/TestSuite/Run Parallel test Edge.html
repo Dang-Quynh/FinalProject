@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Run Parallel test Edge</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>36/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>33/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 31 09:47:45 ICT 2024</td>
+<td>Started on:</td><td>Wed Apr 10 22:24:10 ICT 2024</td>
 </tr>
-<tr><td>Total time:</td><td>689 seconds (689317 ms)</td>
+<tr><td>Total time:</td><td>752 seconds (752949 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,200 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Expense()'><b>filterByRelatedTo_Expense</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: s2id_expense_id (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53048}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\Admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53048/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e7d7c9b208f3b46ecac303672cbec1fe
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at common.CommonBase.getElement(CommonBase.java:143)
+	at common.CommonBase.clickElement(CommonBase.java:155)
+	at pages.TaskPage2.clickElement(TaskPage2.java:74)
+	at pages.TaskPage2.addTaskDataForRelatedToFilter(TaskPage2.java:109)
+	at testsuite.FilterTaskTest2.filterByRelatedTo_Expense(FilterTaskTest2.java:107)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1854793290", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1854793290'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: s2id_expense_id (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53048}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\Admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53048/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e7d7c9b208f3b46ecac303672cbec1fe
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at common.CommonBase.getElement(CommonBase.java:143)
+	at common.CommonBase.clickElement(CommonBase.java:155)
+	at pages.TaskPage2.clickElement(TaskPage2.java:74)
+	at pages.TaskPage2.addTaskDataForRelatedToFilter(TaskPage2.java:109)
+	at testsuite.FilterTaskTest2.filterByRelatedTo_Expense(FilterTaskTest2.java:107)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>23</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByMilestone_Release()'><b>filterByMilestone_Release</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: s2id_autogen12_search (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53715}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\Admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53715/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 49d5684eebe66981d47a8defe5ccaa85
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at common.CommonBase.getElement(CommonBase.java:143)
+	at common.CommonBase.sendKeysElement(CommonBase.java:169)
+	at pages.TaskPage2.sendKeysElement(TaskPage2.java:78)
+	at pages.TaskPage2.filterByMilestone(TaskPage2.java:192)
+	at testsuite.FilterTaskTest2.filterByMilestone_Release(FilterTaskTest2.java:219)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace309406534", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace309406534'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: s2id_autogen12_search (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53715}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\Admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53715/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 49d5684eebe66981d47a8defe5ccaa85
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at common.CommonBase.getElement(CommonBase.java:143)
+	at common.CommonBase.sendKeysElement(CommonBase.java:169)
+	at pages.TaskPage2.sendKeysElement(TaskPage2.java:78)
+	at pages.TaskPage2.filterByMilestone(TaskPage2.java:192)
+	at testsuite.FilterTaskTest2.filterByMilestone_Release(FilterTaskTest2.java:219)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>20</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByMilestone_BetaRelease()'><b>filterByMilestone_BetaRelease</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: s2id_autogen12_search (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53798}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\Admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53798/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8db0bb683a19a6ff50ec32731c80d05c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at common.CommonBase.getElement(CommonBase.java:143)
+	at common.CommonBase.sendKeysElement(CommonBase.java:169)
+	at pages.TaskPage2.sendKeysElement(TaskPage2.java:78)
+	at pages.TaskPage2.filterByMilestone(TaskPage2.java:192)
+	at testsuite.FilterTaskTest2.filterByMilestone_BetaRelease(FilterTaskTest2.java:229)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace938930541", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace938930541'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: s2id_autogen12_search (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.21&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 123.0.2420.81, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:53798}, msedge: {msedgedriverVersion: 123.0.2420.81 (8acdca46cf48..., userDataDir: C:\Users\Admin\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53798/devtoo..., se:cdpVersion: 123.0.2420.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 8db0bb683a19a6ff50ec32731c80d05c
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:230)
+	at common.CommonBase.getElement(CommonBase.java:143)
+	at common.CommonBase.sendKeysElement(CommonBase.java:169)
+	at pages.TaskPage2.sendKeysElement(TaskPage2.java:78)
+	at pages.TaskPage2.filterByMilestone(TaskPage2.java:192)
+	at testsuite.FilterTaskTest2.filterByMilestone_BetaRelease(FilterTaskTest2.java:229)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:66)
+	at com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:109)
+</pre></div></td>
+<td>20</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,185 +269,170 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByPriority_Minor()'><b>filterByPriority_Minor</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Project()'><b>filterByRelatedTo_Project</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.addFilter_Fail()'><b>addFilter_Fail</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.addFilter_Success()'><b>addFilter_Success</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByProject()'><b>filterByProject</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_Custom_greater_CurrentDay()'><b>filterByDeadline_Custom_greater_CurrentDay</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Subscription()'><b>filterByRelatedTo_Subscription</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Client()'><b>filterByRelatedTo_Client</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Invoice()'><b>filterByRelatedTo_Invoice</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByPriority_Minor()'><b>filterByPriority_Minor</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_Tomorrow()'><b>filterByDeadline_Tomorrow</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>4</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByStatus_Todo()'><b>filterByStatus_Todo</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.addFilter_Fail()'><b>addFilter_Fail</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>1</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByPriority_Major()'><b>filterByPriority_Major</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Estimate()'><b>filterByRelatedTo_Estimate</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByMilestone_Release()'><b>filterByMilestone_Release</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>4</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_In7Days()'><b>filterByDeadline_In7Days</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_Custom_Less_CurrentDay()'><b>filterByDeadline_Custom_Less_CurrentDay</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByPriority_Critical()'><b>filterByPriority_Critical</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Lead()'><b>filterByRelatedTo_Lead</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_Tomorrow()'><b>filterByDeadline_Tomorrow</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.deleteFilter()'><b>deleteFilter</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>3</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Project()'><b>filterByRelatedTo_Project</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByPriority_Critical()'><b>filterByPriority_Critical</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Subscription()'><b>filterByRelatedTo_Subscription</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_In15Days()'><b>filterByDeadline_In15Days</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_In7Days()'><b>filterByDeadline_In7Days</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_Today()'><b>filterByDeadline_Today</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_Expired()'><b>filterByDeadline_Expired</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_Custom_Less_CurrentDay()'><b>filterByDeadline_Custom_Less_CurrentDay</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Expense()'><b>filterByRelatedTo_Expense</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Lead()'><b>filterByRelatedTo_Lead</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByMilestone_BetaRelease()'><b>filterByMilestone_BetaRelease</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>4</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByTeamMember()'><b>filterByTeamMember</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByTeamMember()'><b>filterByTeamMember</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>1</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Invoice()'><b>filterByRelatedTo_Invoice</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByPriority_Blocker()'><b>filterByPriority_Blocker</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_Today()'><b>filterByDeadline_Today</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Ticket()'><b>filterByRelatedTo_Ticket</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByLabel()'><b>filterByLabel</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByStatus_Review()'><b>filterByStatus_Review</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Contract()'><b>filterByRelatedTo_Contract</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByPriority_Blocker()'><b>filterByPriority_Blocker</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_Custom_Equal_CurrentDay()'><b>filterByDeadline_Custom_Equal_CurrentDay</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Proposal()'><b>filterByRelatedTo_Proposal</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.editFilter()'><b>editFilter</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.editFilter()'><b>editFilter</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>4</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Client()'><b>filterByRelatedTo_Client</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Ticket()'><b>filterByRelatedTo_Ticket</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByStatus_InProgress()'><b>filterByStatus_InProgress</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_Custom_Equal_CurrentDay()'><b>filterByDeadline_Custom_Equal_CurrentDay</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
-<td>3</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.addFilter_Success()'><b>addFilter_Success</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>3</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_Expired()'><b>filterByDeadline_Expired</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByLabel()'><b>filterByLabel</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByProject()'><b>filterByProject</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Order()'><b>filterByRelatedTo_Order</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByDeadline_Custom_greater_CurrentDay()'><b>filterByDeadline_Custom_greater_CurrentDay</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByStatus_Done()'><b>filterByStatus_Done</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>2</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.filterByRelatedTo_Order()'><b>filterByRelatedTo_Order</b><br>Test class: testsuite.FilterTaskTest</td>
-<td></td>
-<td>7</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
-<tr>
-<td title='testsuite.FilterTaskTest.deleteFilter()'><b>deleteFilter</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByStatus_Review()'><b>filterByStatus_Review</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>3</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 <tr>
-<td title='testsuite.FilterTaskTest.filterByStatus_Todo()'><b>filterByStatus_Todo</b><br>Test class: testsuite.FilterTaskTest</td>
+<td title='testsuite.FilterTaskTest2.filterByStatus_Done()'><b>filterByStatus_Done</b><br>Test class: testsuite.FilterTaskTest2</td>
 <td></td>
 <td>3</td>
-<td>testsuite.FilterTaskTest@4b1c1ea0</td></tr>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Estimate()'><b>filterByRelatedTo_Estimate</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>9</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByStatus_InProgress()'><b>filterByStatus_InProgress</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByPriority_Major()'><b>filterByPriority_Major</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>2</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Proposal()'><b>filterByRelatedTo_Proposal</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByRelatedTo_Contract()'><b>filterByRelatedTo_Contract</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>8</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
+<tr>
+<td title='testsuite.FilterTaskTest2.filterByDeadline_In15Days()'><b>filterByDeadline_In15Days</b><br>Test class: testsuite.FilterTaskTest2</td>
+<td></td>
+<td>3</td>
+<td>testsuite.FilterTaskTest2@366647c2</td></tr>
 </table><p>
 </body>
 </html>

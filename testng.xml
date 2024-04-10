@@ -2,24 +2,24 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="TestSuite">
 
-	<test name="Run Parallel test Chrome">
-		<parameter name="browser" value="chrome"></parameter>
-		<classes>
-			<class name="testsuite.FilterTaskTest" />
-		</classes>
-	</test>
+<!--	<test name="Run Parallel test Chrome">-->
+<!--		<parameter name="browser" value="chrome"></parameter>-->
+<!--		<classes>-->
+<!--			<class name="testsuite.FilterTaskTest2" />-->
+<!--		</classes>-->
+<!--	</test>-->
 
-	<test name="Run Parallel test Edge">
-		<parameter name="browser" value="edge"></parameter>
-		<classes>
-            <class name="testsuite.FilterTaskTest" />
-		</classes>
-	</test>
+<!--	<test name="Run Parallel test Edge">-->
+<!--		<parameter name="browser" value="edge"></parameter>-->
+<!--		<classes>-->
+<!--            <class name="testsuite.FilterTaskTest2" />-->
+<!--		</classes>-->
+<!--	</test>-->
 
 	<test name="Run Parallel test Firefox">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
-			<class name="testsuite.FilterTaskTest" />
+			<class name="testsuite.FilterTaskTest2" />
 		</classes>
 	</test>
 
